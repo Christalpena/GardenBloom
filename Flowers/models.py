@@ -12,12 +12,12 @@ class Flowers(models.Model):
     name = models.CharField(max_length=200)
     price = models.DecimalField(max_digits=5, decimal_places=2)
     description = models.TextField()
-    image = models.ImageField(upload_to='flower/')
+    image = models.URLField(max_length=1000)
     SIZE = [
-    (1,'X'),
-    (2, 'S'),
-    (3, 'M'),
-    (4, 'L'),
+    ("X",'X'),
+    ("S", 'S'),
+    ("M", 'M'),
+    ('L', 'L'),
 ]
     size = models.CharField(choices=SIZE,max_length=2)
     type = models.ForeignKey(Type, on_delete=models.CASCADE)
