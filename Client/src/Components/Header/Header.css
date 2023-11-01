@@ -6,14 +6,45 @@
     box-shadow: 0px 0px 6px 3px rgba(128, 128, 128, 0.159);
 }
 .header__logo{
-    height: 50px;
+    height: 65px;
 }
 
 .header-form__content{
     margin: 0px 10px;
+    flex-grow: 2;
+    text-align: center;
+}
+
+.header-form__content__input{
+    width: 90%;
+    border-radius: 20px;
+    height: 32px;
+    border-color: pink;
+    
+}
+.header-form__content__btn{
+    border-radius: 10px 0px 10px 10px;
+    background-color:pink;
+    border-color: transparent;
+    margin-left: -2rem;
+    border-radius: 50%;
+    height: 32px;
 }
 .header-nav__content{
     display: flex;
     flex-grow: 2;
     justify-content: space-around;
+    align-items: center;
 }
+
+.header-nav__content__item{
+    margin: 0px;
+
+}
+
+.header__icon{
+    margin: 0px;
+    cursor: pointer;
+    margin: 0px 1rem;
+}
+
