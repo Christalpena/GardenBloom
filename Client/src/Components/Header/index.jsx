@@ -16,6 +16,7 @@ const Header = () => {
                     <button type="submi" className="header-form__content__btn"><LuSearch />
                     </button>
                 </form>
+                <Nav />
                 <PiShoppingCartSimpleBold className="header__icon"
                     size="1.5rem"
                     color="pink" />
