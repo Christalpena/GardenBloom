@@ -17,18 +17,15 @@
 
 .header-form__content__input{
     width: 90%;
-    border-radius: 20px;
     height: 32px;
-    border-color: pink;
+    border-color: rgba(176, 173, 173, 0.303);
     
 }
 .header-form__content__btn{
-    border-radius: 10px 0px 10px 10px;
-    background-color:pink;
-    border-color: transparent;
     margin-left: -2rem;
-    border-radius: 50%;
     height: 32px;
+    border-color: rgba(176, 173, 173, 0.303);
+
 }
 
 .header__icon{

@@ -1,5 +1,5 @@
 import "./Header.css"
-import {PiShoppingCartSimpleBold} from 'react-icons/pi'
+import {LiaShoppingBagSolid} from 'react-icons/lia'
 import { LuSearch } from "react-icons/lu"
 import {VscAccount} from 'react-icons/vsc'
 import Nav from "./Nav";
@@ -19,11 +19,11 @@ const Header = () => {
                 <div className="header__nav">
                     <Nav />
                 </div>
-                <PiShoppingCartSimpleBold className="header__icon"
-                    size="1.5rem"
-                    color="pink" />
-                <VscAccount className="header__icon" color="pink" 
-                size="1.5rem"/>
+                <LiaShoppingBagSolid className="header__icon"
+                    size="1.9rem"
+                    color="black" />
+                <VscAccount className="header__icon" color="black" 
+                size="1.8rem"/>
            </div>
            <div className="nav">
             <Nav />

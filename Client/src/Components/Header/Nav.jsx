@@ -21,8 +21,7 @@ export default function Nav() {
             position: "relative",
             padding: "0.65rem 0.75rem",
             backgroundColor: "pink",
-            color: "black",
-            borderRadius: "999px",
+            color: "white",
             borderColor:"transparent",
             margin: "0px 10px",
             fontWeight:"bold"
@@ -35,16 +34,15 @@ export default function Nav() {
             >
                 <span
                 style={{
-                    borderRadius: "999px",
                     position: "absolute",
                     top: 0,
                     left: 0,
                     right: 0,
                     bottom: 0,
                     zIndex: 10,
-                    backgroundColor: "white",
+                    backgroundColor: "black",
                     mixBlendMode:"soft-light",
-                    fontWeight:"bold"
+                    fontWeight:"bold",
                 }}
                 />
             </MagicTabSelect>
