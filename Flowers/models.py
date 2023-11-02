@@ -21,6 +21,7 @@ class Flowers(models.Model):
 ]
     size = models.CharField(choices=SIZE,max_length=2)
     type = models.ForeignKey(Type, on_delete=models.CASCADE)
+    discount = models.IntegerField(blank=True,default=0)
 
     def __str__(self):
         return self.name
