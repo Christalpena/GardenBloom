@@ -24,7 +24,8 @@ export default function Nav() {
             color: "black",
             borderRadius: "999px",
             borderColor:"transparent",
-            margin: "0px 10px"
+            margin: "0px 10px",
+            fontWeight:"bold"
             }}
         >
             {selectedIndex === i && (

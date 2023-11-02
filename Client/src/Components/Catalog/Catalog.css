@@ -1,0 +1,20 @@
+.flowers-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    justify-content: space-between;
+    margin: auto;
+
+}
+
+.card{
+    border-color: transparent;
+    background-color: transparent;
+    text-align: center;
+}
+
+.card__img{
+    height: 280px;
+    width:275px;
+
+}
