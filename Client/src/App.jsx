@@ -13,6 +13,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Navigate to='/GardenBloom' />}></Route>
         <Route path="/GardenBloom" element={<Home/>}> </Route>
+        <Route path="/Home" element={<Navigate to='/GardenBloom' />} > </Route>
+        <Route path="/Catalog" > </Route>
+        <Route path="/About_Us" > </Route>
+        <Route path="/Contacts" > </Route>
       </Routes>
     </section> 
     </BrowserRouter>

@@ -16,12 +16,17 @@ const Header = () => {
                     <button type="submi" className="header-form__content__btn"><LuSearch />
                     </button>
                 </form>
-                <Nav />
+                <div className="header__nav">
+                    <Nav />
+                </div>
                 <PiShoppingCartSimpleBold className="header__icon"
                     size="1.5rem"
                     color="pink" />
                 <VscAccount className="header__icon" color="pink" 
                 size="1.5rem"/>
+           </div>
+           <div className="nav">
+            <Nav />
            </div>
 
         </header>

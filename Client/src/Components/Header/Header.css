@@ -1,6 +1,6 @@
 .header{
     display: flex;
-    padding: 0.5rem 2rem;
+    padding: 0.5rem 8rem;
     align-items: center;
     background-color: white;
     box-shadow: 0px 0px 6px 3px rgba(128, 128, 128, 0.159);
@@ -30,17 +30,6 @@
     border-radius: 50%;
     height: 32px;
 }
-.header-nav__content{
-    display: flex;
-    flex-grow: 2;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.header-nav__content__item{
-    margin: 0px;
-
-}
 
 .header__icon{
     margin: 0px;
@@ -48,3 +37,17 @@
     margin: 0px 1rem;
 }
 
+.nav{
+    display: none;
+}
+
+@media screen  and (max-width:1100px){
+    .header__nav{
+        display: none;
+    }
+    .nav{
+        display: flex;
+        justify-content: center;
+
+    }
+}
