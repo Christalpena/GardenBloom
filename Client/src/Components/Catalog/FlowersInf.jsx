@@ -1,7 +1,7 @@
 import { getFlowers } from '../../Api/api'
 import { useEffect, useState } from 'react'
 
-export function ListApi () {
+export function ListFlower () {
     const [flowers, setFlowers] = useState([])
 
     useEffect(() => {

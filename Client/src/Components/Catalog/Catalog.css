@@ -1,10 +1,22 @@
 .flowers-container{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+
+}
+
+.flowers-container__content{
     display: flex;
     flex-wrap: wrap;
-    width: 70%;
     justify-content: space-between;
-    margin: auto;
+    width: 50%;
 
+}
+
+.flowers-container__filters{
+    width: 15%;
+    margin-right: 2rem;
+    border-color: rgba(176, 173, 173, 0.303);
 }
 
 .card{
@@ -14,7 +26,46 @@
 }
 
 .card__img{
-    height: 280px;
+    height: 300px;
     width:275px;
+    cursor: pointer;
 
+}
+
+.card-inf__content{
+    position: absolute;
+    width: 95%;
+    top: 79%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.769);
+}
+
+.card-inf__content__price{
+    margin: 0px;
+}
+
+.flowers-container__filters-inputs__container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flowers-container__filters-inputs__container__item{
+    width: 100px;
+}
+
+.flowers-container__filters__btn{
+    width: 100%;
+}
+
+.flowers-container__filters-inputs__container p{
+    margin: 0px;
+}
+
+.flowers-container__filters-type__container{
+    background-color: red;
 }
