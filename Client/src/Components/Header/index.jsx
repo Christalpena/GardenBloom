@@ -9,7 +9,7 @@ const Header = () => {
     return(
         <header>
            <div className="header">
-                <img className="header__logo" src="img/GardenBloom-logo.png" alt="" />
+                <img className="header__logo" src="/img/logo.png" alt="" />
 
                 <form action="" className="header-form__content">
                     <input type="search" className="header-form__content__input" />

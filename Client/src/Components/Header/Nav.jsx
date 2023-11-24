@@ -6,9 +6,7 @@ const pillTabs = ["Home", "Catalog", "About_Us", "Contacts"];
  
 export default function Nav() {
   const [selectedIndex, setSelectedIndex] = useState(1);
-  console.log(selectedIndex)
   const tabsComponents = pillTabs.map((text, i) => {
-    console.log(text)
 
     return (
         <Link to={`/${text}`}>

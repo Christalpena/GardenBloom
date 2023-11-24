@@ -7,3 +7,7 @@ const flowersApi = axios.create({
 export const getFlowers = () => {
     return flowersApi.get('/')
 }
+
+export const flowerInf = (id) => {
+    return flowersApi.get(`/${id}/`)
+}

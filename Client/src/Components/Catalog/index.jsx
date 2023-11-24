@@ -1,70 +1,48 @@
 import './Catalog.css'
-import { ListFlower } from './FlowersInf'
+import { ListFlowers } from '../../Api/FlowersInf'
 import FlowerCard from './FlowerCard'
+import Filters from '../Filters/FiltersSection';
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 
 export function Catalog() {
-    const [types,setTypes] = useState([]);
-    const [size,setSize] = useState([]);
-    const flowers = ListFlower();
-    
-    useEffect(() => {
-        if (flowers && flowers.length > 0) {
-          const newTypes = Array.from(new Set(flowers.map((flower) => flower.type_name)));
-          setTypes(newTypes);
-        }
-      }, [flowers]);
+    const flowers = ListFlowers();
+    const [newFlowers, setFlowers] = useState(flowers);
+    const [param, setParam] = useState(useParams)
 
-      useEffect(() => {
-        if (flowers && flowers.length > 0) {
-          const newSize = Array.from(new Set(flowers.map((flower) => flower.size)));
-          setSize(newSize);
-        }
-      }, [flowers]);
+    const filterType = (type) => {
+        const filteredFlowers = flowers.filter(flower => flower.type_name === type)
+        setFlowers(filteredFlowers);
+
+    }
+
+    const filterSize = (size) => {
+        const filteredFlowers =flowers.filter(flower => flower.size === size)
+        setFlowers(filteredFlowers);
+    }
+
+    useEffect(() => {
+        setFlowers(flowers);
+    }, [flowers]);
 
     return(
-        <div className='flowers-container'>
-            <div className='flowers-container__filters'>
-                <h3 className='flowers-container__filters__title'>Price</h3>
-                <div className='flowers-container__filters-inputs__container'>
-                    <input className='flowers-container__filters-inputs__container__item' type="number" />
-                    <p>From</p>
-                    <input className='flowers-container__filters-inputs__container__item' type="number" />
-                    <p>To</p>
-                </div>
-                <button className='flowers-container__filters__btn'>filter</button>
-                <h3 className='flowers-container__filters__title'>Type</h3>
-
-                <div className='flowers-container__filters-type__container'>
-                    <ul>
-                        {
-                        types.map((types) => {return (<Link to={`/${types}`} key={types}><li>{types}</li></Link>)})
-                        }
-                    </ul>
-                </div>
-
-                <h3 className='flowers-container__filters__title'>Size</h3>
-                    <ul>
-                        {
-                        size.map((size) => {return (<Link to={`/${size}`} key={size}><li>{size}</li></Link>)})
-                        }
-                    </ul>
+        <section className='flowers'>
+            <div className='flowers__filter'>
+                <Filters filterType={filterType} filterSize={filterSize} />
             </div>
-            <div className='flowers-container__content'>
+            <div className='flowers__container'>
                 {
-                flowers.map((flower) => 
-                <FlowerCard
-                key={flower.id} 
-                url={flower.image}
-                name={flower.name}
-                price={flower.price}
-                />
-                )}
+                    newFlowers.map((flower) => 
+                    <FlowerCard 
+                        key={flower.id}
+                        id={flower.id}
+                        name={flower.name}
+                        img={flower.image}
+                    /> 
+                    )
+                }
             </div>
-
-
-        </div>
+        </section>
     )
 }

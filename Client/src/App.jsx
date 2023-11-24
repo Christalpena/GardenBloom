@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import './App.css'
 import Header from './Components/Header'
-import { BrowserRouter,Navigate,Route,Routes } from 'react-router-dom'
+import { BrowserRouter,Navigate,Route,Routes,useParams } from 'react-router-dom'
 import { Home } from './Components/Home'
 import { Catalog } from './Components/Catalog'
+import FlowerInf from './Components/FlowerInf'
 
 function App() {
 
@@ -15,9 +16,10 @@ function App() {
         <Route path="/" element={<Navigate to='/GardenBloom' />}></Route>
         <Route path="/GardenBloom" element={<Home/>}> </Route>
         <Route path="/Home" element={<Navigate to='/GardenBloom' />} > </Route>
-        <Route path="/Catalog" element={<Catalog />} > </Route>
+        <Route path="/Catalog/:type?" element={<Catalog />} > </Route>
         <Route path="/About_Us" > </Route>
         <Route path="/Contacts" > </Route>
+        <Route path="/Catalog/:name/:id" element={<FlowerInf key={window.location.pathname} />} > </Route>
       </Routes>
     </section> 
     </BrowserRouter>

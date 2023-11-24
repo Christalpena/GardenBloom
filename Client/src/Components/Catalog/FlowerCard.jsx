@@ -1,22 +1,21 @@
 import "./Catalog.css"
-import { AiOutlineHeart } from 'react-icons/ai'
-import {LiaShoppingBagSolid} from 'react-icons/lia'
 
+import { Link } from "react-router-dom";
 
 const FlowerCard = (props) => {
-    return (
-        <div className="card" key={props.id}>
-            <img className="card__img" src={props.url} alt="" />
-            <div className="card-inf__content">
-                <h5 className="card-inf__content__name">{props.name}</h5>
-                <p className="card-inf__content__price">{props.price}</p>
-            </div>
+    console.log(props.name)
 
-            <div>
-                <AiOutlineHeart cursor="pointer" size="2rem" />
-                <LiaShoppingBagSolid cursor="pointer" size="2rem"/>
+    return (
+        <Link  to={`/Catalog/${props.name}/${props.id}`} replace>
+            <div className="card">
+                <img className="card__img" src={props.img} alt="" />
+                <div className="card__content">
+                    <h4 className="card__title">{props.name}</h4>
+                    <p>losaddasdasd</p>
+                </div>
             </div>
-        </div>
+        </Link>
+
     )
 };
 
