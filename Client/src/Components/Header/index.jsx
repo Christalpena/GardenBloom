@@ -1,5 +1,5 @@
 import "./Header.css"
-import {LiaShoppingBagSolid} from 'react-icons/lia'
+import { BsBagHeart } from "react-icons/bs";
 import { LuSearch } from "react-icons/lu"
 import {VscAccount} from 'react-icons/vsc'
 import Nav from "./Nav";
@@ -13,13 +13,13 @@ const Header = () => {
 
                 <form action="" className="header-form__content">
                     <input type="search" className="header-form__content__input" />
-                    <button type="submi" className="header-form__content__btn"><LuSearch />
+                    <button type="submi" className="header-form__content__btn"><LuSearch size={'1.5rem'} />
                     </button>
                 </form>
                 <div className="header__nav">
                     <Nav />
                 </div>
-                <LiaShoppingBagSolid className="header__icon"
+                <BsBagHeart className="header__icon"
                     size="1.9rem"
                     color="black" />
                 <VscAccount className="header__icon" color="black" 

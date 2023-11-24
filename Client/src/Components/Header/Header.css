@@ -21,14 +21,16 @@
 
 .header-form__content__input{
     width: 90%;
-    height: 32px;
+    height: 40px;
     border-color: rgba(176, 173, 173, 0.303);
+    border-radius: 20px;
     
 }
 .header-form__content__btn{
-    margin-left: -2rem;
-    height: 32px;
+    transform: translate(-30px,-2px);
+    height: 40px;
     border-color: rgba(176, 173, 173, 0.303);
+    border-radius: 0px 20px 20px;
 
 }
 
@@ -49,6 +51,8 @@
     .nav{
         display: flex;
         justify-content: center;
+        margin-top: 5rem;
+        height: fit-content !important;
 
     }
 }

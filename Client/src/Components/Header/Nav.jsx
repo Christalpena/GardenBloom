@@ -22,7 +22,8 @@ export default function Nav() {
             color: "white",
             borderColor:"transparent",
             margin: "0px 10px",
-            fontWeight:"bold"
+            fontWeight:"bold",
+            borderRadius:"30px"
             }}
         >
             {selectedIndex === i && (
@@ -41,6 +42,7 @@ export default function Nav() {
                     backgroundColor: "black",
                     mixBlendMode:"soft-light",
                     fontWeight:"bold",
+                    borderRadius:"30px"
                 }}
                 />
             </MagicTabSelect>
