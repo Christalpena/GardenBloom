@@ -3,9 +3,10 @@ import { BsBagHeart } from "react-icons/bs";
 import { LuSearch } from "react-icons/lu"
 import {VscAccount} from 'react-icons/vsc'
 import Nav from "./Nav";
+import Badge from '@mui/material/Badge';
+import { Link } from "react-router-dom";
 
-const Header = () => {
-
+const Header = (props) => {
     return(
         <header>
            <div className="header">
@@ -19,12 +20,21 @@ const Header = () => {
                 <div className="header__nav">
                     <Nav />
                 </div>
-                <BsBagHeart className="header__icon"
-                    size="1.9rem"
-                    color="black" />
-                <VscAccount className="header__icon" color="black" 
+                <Badge badgeContent={props.items} color="success" >
+                    <Link to={'/Catalog/shopcard'}>
+                        <BsBagHeart 
+                            className="header__icon"
+                            size="1.9rem"
+                            color="black" />
+                    </Link>
+                </Badge>
+
+                <VscAccount 
+                className="header__icon" 
+                color="black" 
                 size="1.8rem"/>
            </div>
+
            <div className="nav">
             <Nav />
            </div>

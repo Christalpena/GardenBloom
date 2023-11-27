@@ -3,13 +3,11 @@ import { ListFlowers } from '../../Api/FlowersInf'
 import FlowerCard from './FlowerCard'
 import Filters from '../Filters/FiltersSection';
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
 
-
-export function Catalog() {
+export function Catalog(props) {
     const flowers = ListFlowers();
     const [newFlowers, setFlowers] = useState(flowers);
-    const [param, setParam] = useState(useParams)
+
 
     const filterType = (type) => {
         const filteredFlowers = flowers.filter(flower => flower.type_name === type)
@@ -39,6 +37,8 @@ export function Catalog() {
                         id={flower.id}
                         name={flower.name}
                         img={flower.image}
+                        setItems={props.setItems}
+                        items={props.items}
                     /> 
                     )
                 }

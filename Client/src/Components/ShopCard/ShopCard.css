@@ -1,0 +1,4 @@
+.shopCard{
+    display: flex;
+    justify-content: space-around;
+}
