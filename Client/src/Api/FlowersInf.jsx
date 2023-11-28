@@ -15,7 +15,14 @@ export function ListFlowers () {
     return(flowers)
 }
 
+
+/**
+    * This function gets the flower information by id from the Django RestApi
+    * @param {number} id - id
+    * @returns {object} - A object with the flower information
+*/
 export function ListFlowerInf (id) {
+
     const [flower,setFlowerInf] = useState([])
 
     useEffect(() => {

@@ -5,6 +5,7 @@ import FlowerCard from "../Catalog/FlowerCard";
 
 const FlowerInf = (props) => {
     const params = useParams()
+    //Getting the flower data by id 
     const flower = ListFlowerInf(params.id);
     const AllFlowers = ListFlowers()
 
@@ -22,11 +23,11 @@ const FlowerInf = (props) => {
                     <p>{flower.description}</p>
                     <h4>Size: {flower.size}</h4>
                     <h4>Type: {flower.type_name}</h4>
-                    <button>Add</button>
+                    <button className="flowerinf__btn">Add to card</button>
                 </div>
             </div>
 
-            <h1>This might like You!!</h1>
+            <h1 className="flowerinf__title">This might like You!!</h1>
 
             <div className="flowerinf__recomendations">
                 {
