@@ -1,0 +1,19 @@
+
+.filters__title{
+    color: #E90064;
+    font-weight: 550;
+}
+
+.filters__type li{
+    list-style: none;
+    color: black !important;
+    font-size:larger;
+
+}
+
+.filters__size li{
+    list-style: none;
+    color: black !important;
+    font-size:larger;
+
+}

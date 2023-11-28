@@ -3,7 +3,7 @@ import "./FlowerInf.css"
 import { ListFlowerInf,ListFlowers } from "../../Api/FlowersInf";
 import FlowerCard from "../Catalog/FlowerCard";
 
-const FlowerInf = () => {
+const FlowerInf = (props) => {
     const params = useParams()
     const flower = ListFlowerInf(params.id);
     const AllFlowers = ListFlowers()
@@ -36,7 +36,8 @@ const FlowerInf = () => {
                         id={flower.id}
                         name={flower.name}
                         img={flower.image}
-                        
+                        setItems={props.setItems}
+                        items={props.items}
                     />
                     
                     )

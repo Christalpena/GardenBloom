@@ -2,8 +2,10 @@ import { useEffect, useState } from "react"
 import { ListFlowers } from "../../Api/FlowersInf"
 import { Link } from "react-router-dom"
 import React from "react"
+import "./FilterSection.css"
 
 const Filters = ({filterType,filterSize}) => {
+
     const [types, setTypes] = useState<string[]>([]);
     const [size, setSize] = useState<string[]>([]);
     
@@ -23,14 +25,14 @@ const Filters = ({filterType,filterSize}) => {
     return(
         <div className="filters">
             <div className="filters__price">
-                <h1>Price</h1>
+                <h1 className="filters__title">Price</h1>
 
             </div>
             <div className="filters__type">
-                <h1>Types</h1>
+                <h1 className="filters__title">Types</h1>
                 {
                     types.map((type) => {return (
-                    <Link 
+                    <Link style={{textDecoration:'none'}}
                         to={`/Catalog/${type}`} 
                         key={type}
                         onClick={() => filterType(type)}
@@ -41,13 +43,14 @@ const Filters = ({filterType,filterSize}) => {
             </div>
             
             <div className="filters__size">
-                <h1>Sizes</h1>
+                <h1 className="filters__title">Sizes</h1>
                 {
                     size.map((size) => {return (
                     <Link 
-                    to={`/Catalog/${size}`} 
-                    key={size} 
-                    onClick={() => filterSize(size)}>
+                        style={{textDecoration:'none'}}
+                        to={`/Catalog/${size}`} 
+                        key={size} 
+                        onClick={() => filterSize(size)}>
                         <li>{size}</li>
                     </Link>                       
                     )})

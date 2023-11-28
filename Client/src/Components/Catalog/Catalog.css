@@ -62,6 +62,7 @@
     align-items: center;
     box-shadow: 0px 0px 6px 3px rgba(128, 128, 128, 0.159);
     background-color: white;
+    cursor: default;
 }
 
 .card__icons h5{
@@ -69,5 +70,5 @@
 }
 
 .card__icon{
-    cursor: pointer;
+    cursor: pointer !important;
 }

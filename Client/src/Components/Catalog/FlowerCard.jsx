@@ -57,19 +57,27 @@ const FlowerCard = (props) => {
 
                 {
                     url === '/Catalog/shopcard' ? 
-                    <><FaPlus size={'1.5rem'} className="card__icon" onClick={() => setItem()} />
-                    <h4>{item.quantity}</h4>
-                    <TiMinus  onClick={() => rest()} size={'1.5rem'} className="card__icon" /></>
+                    <>
+                        <FaPlus 
+                        size={'1.5rem'} 
+                        className="card__icon" 
+                        onClick={() => setItem()} />
+
+                        <h4>{item.quantity}</h4>
+
+                        <TiMinus  onClick={() => rest()} size={'1.5rem'} className="card__icon" />
+                    </>
                     : 
                 
-                    <><IoHeartOutline 
-                    size={'1.5rem'} 
-                    className="card__icon" />
-                    
-                    <BsBagHeart 
-                    onClick={() => setItem()} 
-                    size={'1.5rem'} 
-                    className="card__icon" />
+                    <>
+                        <IoHeartOutline 
+                        size={'1.5rem'} 
+                        className="card__icon" />
+                        
+                        <BsBagHeart
+                        onClick={() => setItem()} 
+                        size={'1.5rem'} 
+                        className="card__icon" />
                     </>
                 }
                 </div>
