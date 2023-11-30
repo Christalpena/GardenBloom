@@ -1,3 +1,70 @@
+.home__container{
+    padding: 0% 9%;
+    margin-top: 2rem;
+    
+}
+
+.home__welcome{
+    position: relative;
+}
+.home__pageName{
+    font-family: 'Pacifico', cursive;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -95%);
+    -webkit-text-stroke-width: 0.0001px;
+    -webkit-text-stroke-color: #E90064;
+}
+
+.home__title{
+    margin: 40px 0px;
+    font-weight: bold;
+    color: green;
+    text-transform: capitalize;
+}
+
 .home__img{
     width: 100%;
+    padding: 0%;
+}
+
+.home__description{
+    font-size: larger;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.home__img2{
+    height: 350px;
+}
+
+.home__paragraphs{
+    max-width: 60ch !important;
+}
+
+.home__discount{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.home__locations {
+    margin: auto;
+    max-width: 90%;
+}
+.home__locations ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.home__locations ul >li{
+    width: 20%;
+    margin-bottom: 10px;
 }

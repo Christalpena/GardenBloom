@@ -37,8 +37,10 @@ export function Catalog(props) {
                         id={flower.id}
                         name={flower.name}
                         img={flower.image}
+                        price={flower.price}
                         setItems={props.setItems}
                         items={props.items}
+                        discount={flower.discount}
                     /> 
                     )
                 }

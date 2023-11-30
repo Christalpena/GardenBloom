@@ -26,7 +26,6 @@
     display: flex;
     align-items: center;
     padding: 10px 0px;
-    margin-bottom: 4rem;
     cursor: pointer;
     box-shadow: 0px 0px 6px 3px rgba(128, 128, 128, 0.159);
     border-color: transparent;
@@ -52,17 +51,28 @@
     font-weight: bold;font-size: larger;
 }
 
+.card__price, .card__discount{
+    margin: 0;
+}
+
+.card__discount{
+    color: red;
+    font-weight: bold;
+
+}
+
 .card__icons{
     width: 200px;
     display: flex;
     justify-content: space-around;
     border-radius: 20px;
-    transform: translate(0,20px);
-    height: 150px;
+    height: 60px;
+    transform: translate(0px, -43px);
     align-items: center;
     box-shadow: 0px 0px 6px 3px rgba(128, 128, 128, 0.159);
     background-color: white;
     cursor: default;
+    margin: auto;
 }
 
 .card__icons h5{

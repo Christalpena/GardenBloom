@@ -36,9 +36,11 @@ const FlowerInf = (props) => {
                         key={flower.id}
                         id={flower.id}
                         name={flower.name}
+                        discount={flower.discount}
                         img={flower.image}
                         setItems={props.setItems}
                         items={props.items}
+                        price={flower.price}
                     />
                     
                     )

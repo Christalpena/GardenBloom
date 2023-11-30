@@ -28,7 +28,8 @@ const FlowerCard = (props) => {
                     name: props.name,
                     price: props.price,
                     image: props.img,
-                    quantity: 1
+                    quantity: 1,
+                    discount:props.discount
                 }
             ]);
         }
@@ -45,46 +46,53 @@ const FlowerCard = (props) => {
     const url = window.location.pathname;
 
     return (
+        <div>
             <div className="card">
                 <Link  to={`/Catalog/${props.name}/${props.id}`} style={{textDecoration:'none',textAlign:"center"}} replace>
                     <img className="card__img" src={props.img} alt={props.name} />
                     <div className="card__content">
                         <h4 className="card__title">{props.name}</h4>
-                        <p>losaddasdasd</p>
+                        <h4 className="card__price">${props.price}</h4>
+                        {
+                            props.discount === 0 ?  <></>
+                            :                         
+                            <p className="card__discount">-{props.discount}%</p>
+                        }
+
                     </div>
                 </Link>
-                <div className="card__icons">
-
-                {
-                    url === '/Catalog/shopcard' ? 
-                    <>
-                        <FaPlus 
-                        size={'1.5rem'} 
-                        className="card__icon" 
-                        onClick={() => setItem()} />
-
-                        <h4>{item.quantity}</h4>
-
-                        <TiMinus  onClick={() => rest()} size={'1.5rem'} className="card__icon" />
-                    </>
-                    : 
-                
-                    <>
-                        <IoHeartOutline 
-                        size={'1.5rem'} 
-                        className="card__icon" />
-                        
-                        <BsBagHeart
-                        onClick={() => setItem()} 
-                        size={'1.5rem'} 
-                        className="card__icon" />
-                    </>
-                }
-                </div>
-                {
-                    open ? <SimpleSnackbar setOpen={setOpen} /> : <></>
-                }
             </div>
+            <div className="card__icons">
+
+            {
+                url === '/Catalog/shopcard' ? 
+                <>
+                    <FaPlus 
+                    size={'1.5rem'} 
+                    className="card__icon" 
+                    onClick={() => setItem()} />
+
+                    <h4>{item.quantity}</h4>
+
+                    <TiMinus  
+                    onClick={() => rest()} size={'1.5rem'} className="card__icon" />
+                </> : 
+                <>
+                    <IoHeartOutline 
+                    size={'1.5rem'} 
+                    className="card__icon" />
+                    
+                    <BsBagHeart
+                    onClick={() => setItem()} 
+                    size={'1.5rem'} 
+                    className="card__icon" />
+                </>
+            }
+            </div>
+            {
+                open ? <SimpleSnackbar setOpen={setOpen} /> : <></>
+            }
+    </div>
 
     )
 };

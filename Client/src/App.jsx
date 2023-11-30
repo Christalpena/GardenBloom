@@ -27,7 +27,7 @@ function App() {
 
         <Route 
           path="/GardenBloom" 
-          element={<Home/>}> 
+          element={<Home setItems={setItems} items={items}/>}> 
         </Route>
 
         <Route path="/Home" 

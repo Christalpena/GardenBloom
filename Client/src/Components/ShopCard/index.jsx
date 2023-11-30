@@ -10,9 +10,11 @@ const ShopCard = (props) => {
                         key={flower.id}
                         id={flower.id}
                         name={flower.name}
+                        price={flower.price}
                         img={flower.image}
                         items={props.items}
                         setItems={props.setItems}
+                        discount={flower.discount}
                     /> 
                     )
                 }
