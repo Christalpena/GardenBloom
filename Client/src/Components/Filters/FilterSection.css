@@ -4,16 +4,34 @@
     font-weight: 550;
 }
 
-.filters__type li{
+.filters__container li{
     list-style: none;
     color: black !important;
     font-size:larger;
+    width: min-content;
+    cursor: pointer;
+    margin-left: 10px;
 
 }
 
-.filters__size li{
-    list-style: none;
-    color: black !important;
-    font-size:larger;
+.filters__inputsBox{
+    display: flex;
+    border-color: green;
+    margin-bottom: 10px;
+    flex-direction: column;
+}
 
+.filters__input{
+    width: 150px !important;
+}
+
+.filters__btn{
+    color:black !important;
+    border-color: gray !important;
+}
+
+.filters__con{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

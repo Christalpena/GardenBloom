@@ -9,15 +9,18 @@ export function Catalog(props) {
     const [newFlowers, setFlowers] = useState(flowers);
 
 
-    const filterType = (type) => {
-        const filteredFlowers = flowers.filter(flower => flower.type_name === type)
-        setFlowers(filteredFlowers);
-
+    const filter = (name,data) => {        
+        const filteredFlowers = flowers.filter(flower => flower[name] === data)
+        data === "" ? setFlowers(flowers) : setFlowers(filteredFlowers);
     }
 
-    const filterSize = (size) => {
-        const filteredFlowers =flowers.filter(flower => flower.size === size)
-        setFlowers(filteredFlowers);
+    const filterPrice =(price1,price2) =>{
+        if(price1  !== 0){
+            const filteredFlowers = flowers.filter(flower => flower.price >= price1 && flower.price <= price2);
+            setFlowers(filteredFlowers)
+        }else{
+            setFlowers(flowers)
+        }
     }
 
     useEffect(() => {
@@ -27,7 +30,7 @@ export function Catalog(props) {
     return(
         <section className='flowers'>
             <div className='flowers__filter'>
-                <Filters filterType={filterType} filterSize={filterSize} />
+                <Filters filter={filter} filterPrice={filterPrice}/>
             </div>
             <div className='flowers__container'>
                 {

@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 const pillTabs = [
   "Home",
   "Catalog",
-  "ABout_Us",
   "Contacts",
 ];
  

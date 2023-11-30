@@ -29,6 +29,9 @@
     text-align: center; 
     margin-left: 20PX;
 }
+.flowerinf__description p{
+    font-size: large;
+}
 .flowerinf__description h2{
     font-weight: bold;
 }
@@ -39,19 +42,18 @@
 
 .flowerinf__btn{
     margin-top: 2rem;
-    width: 95%;
+    width: 45%;
     background-color: green;
     color: white;
     text-transform: uppercase;
     font-weight: bold;
     border-color: transparent;
-    border-radius: 20px;
     transition: all 0.3s ease-in-out;
     height: 30px;
 }
 
 .flowerinf__btn:hover{
-    width: 100%;
+    width: 55%;
     transition: all 0.3s ease-in-out;
     height: 35px;
 }

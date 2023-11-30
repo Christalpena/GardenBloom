@@ -35,7 +35,7 @@ function App() {
         </Route>
 
         <Route 
-          path="/Catalog/:type?" 
+          path="/Catalog" 
           element={<Catalog 
           setItems={setItems} 
           items={items} />} > 
