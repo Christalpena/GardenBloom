@@ -22,7 +22,7 @@
 }
 .card {
     width: 280px;
-    height: 320px;
+    height: 330px;
     display: flex;
     align-items: center;
     padding: 10px 0px;
@@ -33,10 +33,11 @@
 }
 
 .card__img{
-    height: 180px !important;
+    height: 200px !important;
     width: 200px;
     transform: translate(0,-30px);
     border-radius: 20px;
+    box-shadow: 0px 0px 6px 3px rgba(128, 128, 128, 0.159);
 }
 
 .card__content{
@@ -48,7 +49,9 @@
 }
 
 .card__title{
-    font-weight: bold;font-size: larger;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: larger;
 }
 
 .card__price, .card__discount{

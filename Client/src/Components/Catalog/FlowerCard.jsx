@@ -52,7 +52,7 @@ const FlowerCard = (props) => {
                     <img className="card__img" src={props.img} alt={props.name} />
                     <div className="card__content">
                         <h4 className="card__title">{props.name}</h4>
-                        <h4 className="card__price">${props.price}</h4>
+                        <h5 className="card__price">${props.price}</h5>
                         {
                             props.discount === 0 ?  <></>
                             :                         

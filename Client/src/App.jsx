@@ -6,6 +6,7 @@ import { Home } from './Components/Home'
 import { Catalog } from './Components/Catalog'
 import FlowerInf from './Components/FlowerInf'
 import ShopCard from './Components/ShopCard'
+import Footer from './Components/Footer'
 
 function App() {
   const [items,setItems] = useState([]);
@@ -60,6 +61,7 @@ function App() {
         </Route>
 
       </Routes>
+      
     </section> 
     </BrowserRouter>
   )

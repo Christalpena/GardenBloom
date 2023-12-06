@@ -1,42 +1,51 @@
-.home__container{
-    padding: 0% 9%;
-    margin-top: 2rem;
-    
-}
-
 .home__welcome{
     position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url('img/Bouquet.png');
+    background-position:calc(90%);
+    background-repeat: no-repeat;
+    background-size: 500px;
+    background-color: rgba(195, 195, 195, 0.1);
+    margin-bottom: 40px;
+}
+.home__introduction{
+    position: absolute;
+    top: 50%;
+    left: 6%;
+    transform: translate(6%, -50%);
 }
 .home__pageName{
-    font-family: 'Pacifico', cursive;
+    font-size: 6rem;
+    font-family: 'Lilita One', sans-serif;
+    color: pink;
+
+
+}
+.home__h3{
+    max-width: 45ch;
+}
+.home__slogan{
+    color: red;
     font-weight: bold;
-    color: white;
-    position: absolute;
-    top: 95%;
-    left: 50%;
-    transform: translate(-50%, -95%);
-    -webkit-text-stroke-width: 0.0001px;
-    -webkit-text-stroke-color: #E90064;
+    font-family: 'Hedvig Letters Serif', serif;
+
 }
 
 .home__title{
-    margin: 40px 0px;
-    font-weight: bold;
-    color: green;
-    text-transform: capitalize;
-}
-
-.home__img{
-    width: 100%;
-    padding: 0%;
+    margin: 50px 0px 50px 0px;
+    font-family: 'Hedvig Letters Serif', serif;
+    color: black;
+    text-align: center;
+    font-size: 50px;
 }
 
 .home__description{
-    font-size: larger;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-
+    font-size: x-large;
+    max-width: 80ch;
+    text-align: center;
+    margin: auto;
+    padding: 0% 9%;
 }
 
 .home__img2{
@@ -48,23 +57,55 @@
 }
 
 .home__discount{
+    padding: 0% 9%;
+}
+.home__discountCards{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.home__locations {
-    margin: auto;
-    max-width: 90%;
-}
-.home__locations ul{
+
+.home__phrase{
+    padding: 0% !important;
+    height: 80vh;
+    background-image: url('https://png.pngtree.com/background/20210710/original/pngtree-small-fresh-background-floral-background-2018-background-picture-image_1015934.jpg');
     display: flex;
-    list-style: none;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    width: 100%;
+    background-attachment: fixed;
+}
+
+.home__p{
+    max-width: 60%;
+    text-align: center;
+    color: black;
+    padding: 80px 50px;
+    outline: 8px solid;
+    outline-color: pink;
+}
+
+.home__p h1{
+    font-weight: bold;
+    color: pink;
+    text-transform: uppercase;    
+    font-family: 'Lilita One', sans-serif;
+
+}
+
+.home__gallery{
+    padding: 0% 9%;
+}
+.home__galleryDiv{
+    display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
-
-
-.home__locations ul >li{
-    width: 20%;
-    margin-bottom: 10px;
+.home__galleryImg{
+    outline: 2px solid;
+    outline-color: green;
+    width: 400px;
+    height: 400px;
+    margin-bottom: 20px;
 }
