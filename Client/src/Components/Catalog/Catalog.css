@@ -1,7 +1,7 @@
 .flowers{
     display: flex;
     justify-content: space-between;
-    margin-top: 10rem;
+    margin-top: 9rem;
     padding: 0% 9%;
     
 }
@@ -14,11 +14,13 @@
     position:absolute;
     right: 0;
     padding: 0% 9% 0% 0% ;
+    margin-top: 1.3rem;
 
 }
 
 .flowers__filter{
     position: fixed;
+
 }
 .card {
     width: 280px;
@@ -27,17 +29,17 @@
     align-items: center;
     padding: 10px 0px;
     cursor: pointer;
-    box-shadow: 0px 0px 6px 3px rgba(128, 128, 128, 0.159);
+    box-shadow: var(--boxShadow);
     border-color: transparent;
-    border-radius: 20px;
+    border-radius: 0px;
 }
 
 .card__img{
     height: 200px !important;
     width: 200px;
     transform: translate(0,-30px);
-    border-radius: 20px;
-    box-shadow: 0px 0px 6px 3px rgba(128, 128, 128, 0.159);
+    outline: 2px solid;
+    outline-color: var(--image-outline-color);
 }
 
 .card__content{
@@ -52,6 +54,7 @@
     text-transform: capitalize;
     font-weight: bold;
     font-size: larger;
+    
 }
 
 .card__price, .card__discount{
@@ -59,7 +62,7 @@
 }
 
 .card__discount{
-    color: red;
+    color: var(--small-text-color);
     font-weight: bold;
 
 }
@@ -72,7 +75,7 @@
     height: 60px;
     transform: translate(0px, -43px);
     align-items: center;
-    box-shadow: 0px 0px 6px 3px rgba(128, 128, 128, 0.159);
+    box-shadow: var(--boxShadow);
     background-color: white;
     cursor: default;
     margin: auto;

@@ -4,3 +4,10 @@ body{
   box-sizing: border-box;
 }
 
+:root{
+  --title-font-family: 'Hedvig Letters Serif', serif;
+  --image-outline-color: green;
+  --title-color: #E90064;
+  --small-text-color: red;
+  --boxShadow: 0px 0px 6px 3px rgba(177, 177, 177, 0.159);
+}

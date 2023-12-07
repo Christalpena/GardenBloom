@@ -6,14 +6,13 @@
 .flowerinf__content{
     display: flex;
     padding: 50px;
-    box-shadow: 0px 0px 6px 3px rgba(128, 128, 128, 0.159);
+    box-shadow: var(--boxShadow);
     height: 500px;
     width: 90%;
     justify-content: flex-end; 
     margin-left: auto; 
     margin-right: 2rem;
     align-items: center;
-    border-radius: 20px;
 
 }
 
@@ -22,7 +21,7 @@
     height: 400px;
     transform: translate(-120px,0px);
     border-radius: 20px;
-    box-shadow: 0px 0px 6px 3px rgba(128, 128, 128, 0.159);
+    box-shadow: var(--boxShadow);
 
 }
 .flowerinf__description{
@@ -34,9 +33,10 @@
 }
 .flowerinf__description h2{
     font-weight: bold;
+    font-family: var(--title-font-family);
 }
 .flowerinf__price{
-    color: red;
+    color: var(--small-text-color);
     font-weight: bold;
 }
 
@@ -60,6 +60,8 @@
 .flowerinf__title{
     margin: 3rem 0rem;
     font-weight: bold;
+    font-family: var(--title-font-family);
+
 }
 .flowerinf__recomendations{
     display: flex;

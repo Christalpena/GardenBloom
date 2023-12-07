@@ -18,7 +18,7 @@
 .home__pageName{
     font-size: 6rem;
     font-family: 'Lilita One', sans-serif;
-    color: pink;
+    color: var(--title-color);
 
 
 }
@@ -26,18 +26,20 @@
     max-width: 45ch;
 }
 .home__slogan{
-    color: red;
+    color: var(--small-text-color);
     font-weight: bold;
-    font-family: 'Hedvig Letters Serif', serif;
+    font-family: var(--title-font-family);
 
 }
 
 .home__title{
     margin: 50px 0px 50px 0px;
-    font-family: 'Hedvig Letters Serif', serif;
+    font-family: var(--title-font-family);
     color: black;
     text-align: center;
     font-size: 50px;
+    font-weight: bold;
+    
 }
 
 .home__description{
@@ -84,11 +86,12 @@
     padding: 80px 50px;
     outline: 8px solid;
     outline-color: pink;
+    background-color: rgba(255, 255, 255, 0.402);
 }
 
 .home__p h1{
     font-weight: bold;
-    color: pink;
+    color: var(--title-color);
     text-transform: uppercase;    
     font-family: 'Lilita One', sans-serif;
 
@@ -104,7 +107,7 @@
 }
 .home__galleryImg{
     outline: 2px solid;
-    outline-color: green;
+    outline-color: var(--image-outline-color);
     width: 400px;
     height: 400px;
     margin-bottom: 20px;

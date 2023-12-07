@@ -1,7 +1,8 @@
 
 .filters__title{
-    color: #E90064;
-    font-weight: 550;
+    color: var(--title-color);
+    font-size:xx-large;
+    font-family: 'Hedvig Letters Serif', serif;
 }
 
 .filters__container li{
@@ -16,7 +17,6 @@
 
 .filters__inputsBox{
     display: flex;
-    border-color: green;
     margin-bottom: 10px;
     flex-direction: column;
 }

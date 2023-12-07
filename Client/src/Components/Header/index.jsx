@@ -2,10 +2,13 @@ import "./Header.css"
 import { BsBagHeart } from "react-icons/bs";
 import { LuSearch } from "react-icons/lu"
 import {VscAccount} from 'react-icons/vsc'
-import Nav from "./Nav";
 import Badge from '@mui/material/Badge';
 import { Link } from "react-router-dom";
-
+const pillTabs = [
+    "Home",
+    "Catalog",
+    "Contacts",
+];
 const Header = (props) => {
     return(
         <header>
@@ -17,8 +20,12 @@ const Header = (props) => {
                     <button type="submi" className="header-form__content__btn"><LuSearch size={'1.5rem'} />
                     </button>
                 </form>
-                <div className="header__nav">
-                    <Nav />
+                <div className="header__links">
+                    {
+                        pillTabs.map((links) => 
+                            <Link  style={{textDecoration:'none',color:'black'}} to={links}>{links}</Link>
+                        )
+                    }
                 </div>
                 <Badge badgeContent={props.items} color="success" >
                     <Link to={'/Catalog/shopcard'}>
@@ -34,11 +41,6 @@ const Header = (props) => {
                 color="black" 
                 size="1.8rem"/>
            </div>
-
-           <div className="nav">
-            <Nav />
-           </div>
-
         </header>
     );
 };
