@@ -28,7 +28,7 @@ const Header = (props) => {
                     }
                 </div>
                 <Badge badgeContent={props.items} color="success" >
-                    <Link to={'/Catalog/shopcard'}>
+                    <Link to={'/Catalog/shopcart'}>
                         <BsBagHeart 
                             className="header__icon"
                             size="1.9rem"

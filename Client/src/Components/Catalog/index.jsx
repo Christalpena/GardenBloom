@@ -3,8 +3,9 @@ import { ListFlowers } from '../../Api/FlowersInf'
 import FlowerCard from './FlowerCard'
 import Filters from '../Filters/FiltersSection';
 import { useEffect, useState } from 'react';
-
+import SimpleSnackbar from './Alert';
 export function Catalog(props) {
+
     const flowers = ListFlowers();
     const [newFlowers, setFlowers] = useState(flowers);
 
@@ -41,13 +42,16 @@ export function Catalog(props) {
                         name={flower.name}
                         img={flower.image}
                         price={flower.price}
-                        setItems={props.setItems}
                         items={props.items}
                         discount={flower.discount}
+                        addItem={props.addItem}
                     /> 
                     )
                 }
             </div>
+            {
+                props.open ? <SimpleSnackbar setOpen={props.setOpen} /> : <></>
+            }
         </section>
     )
 }

@@ -10,10 +10,30 @@ import Footer from './Components/Footer'
 
 function App() {
   const [items,setItems] = useState([]);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    console.log(items)
-  },[items])
+  },[items]);
+
+
+  const addItem = (data) => {
+      setOpen(!open);
+      setItems(prevItems => {
+        const item = prevItems.find(item => item.id === data.id);
+    
+        if (item) {
+          return prevItems.map(item => 
+            item.id === data.id ? {
+              ...item, quantity: item.quantity + 1,
+              subTotal: (item.price * (item.quantity + 1))
+            } : item
+          );
+        } else {
+          return [...prevItems, data];
+        }
+      });
+      
+  };
 
   return (
     <BrowserRouter>
@@ -38,8 +58,11 @@ function App() {
         <Route 
           path="/Catalog" 
           element={<Catalog 
-          setItems={setItems} 
-          items={items} />} > 
+          items={items}
+          addItem={addItem}
+          open={open}
+          setOpen={setOpen}
+           />} > 
         </Route>
 
         <Route 
@@ -56,8 +79,8 @@ function App() {
         </Route>
 
         <Route 
-          path='/Catalog/shopcard' 
-          element={<ShopCard items={items} setItems={setItems} />}>
+          path='/Catalog/shopcart' 
+          element={<ShopCard items={items} addItem={addItem} setItems={setItems} />}>
         </Route>
 
       </Routes>
