@@ -4,6 +4,7 @@ import FlowerCard from './FlowerCard'
 import Filters from '../Filters/FiltersSection';
 import { useEffect, useState } from 'react';
 import SimpleSnackbar from './Alert';
+import Footer from '../Footer';
 export function Catalog(props) {
 
     const flowers = ListFlowers();
@@ -52,6 +53,7 @@ export function Catalog(props) {
             {
                 props.open ? <SimpleSnackbar setOpen={props.setOpen} /> : <></>
             }
+
         </section>
     )
 }

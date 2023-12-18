@@ -84,7 +84,7 @@ function App() {
         </Route>
 
       </Routes>
-      
+      <Footer />
     </section> 
     </BrowserRouter>
   )

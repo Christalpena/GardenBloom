@@ -3,12 +3,13 @@
     padding: 1% 9%;
     align-items: center;
     background-color: white;
-    box-shadow: var(--boxShadow);
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1;
     justify-content: space-between;
+    outline: 0.5px solid;
+    outline-color: rgba(225, 225, 225, 0.445);
 }
 .header__logo{
     height: 65px;
@@ -25,13 +26,15 @@
     height: 40px;
     border-color: rgba(176, 173, 173, 0.303);
     border-radius: 20px;
+    padding: 0px 20px;
+    outline-color: green;
     
 }
 .header-form__content__btn{
-    transform: translate(-30px,-2px);
+    transform: translate(-40px,-2px);
     height: 40px;
-    border-color: rgba(176, 173, 173, 0.303);
-    border-radius: 0px 20px 20px;
+    background-color: transparent;
+    border-color: transparent;
 
 }
 
@@ -49,9 +52,17 @@
 }
 .header__links a{
     transition: all 0.2s ease-in;
+    flex-grow: 1;
 }
 .header__links a:hover{
     font-size: 17px;
-    color: red !important;
+    color: var(--title-color) !important;
     transition: all 0.2s ease-in;
+}
+
+@media screen and (max-width: 1030px){
+    .header-form__content{
+        display: none;
+    }
+    
 }
