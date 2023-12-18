@@ -88,13 +88,9 @@ const ShopCard = (props) => {
                             )
                         }
 
-                        <div className="shopCart__total">
-                            <button className="shopCart__orderbtn">Holaa</button>
-                            <p>Total: {total()}</p>
-                        </div>
-
-                        <div>
-
+                        <div className="shopCart__total-container">
+                            <button className="shopCart__orderbtn">buy</button>
+                            <p className="shopCart__total">Total: {total()}</p>
                         </div>
                         </div>
                     </section>
