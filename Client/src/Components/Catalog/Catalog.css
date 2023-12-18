@@ -81,3 +81,7 @@
 .card__icon{
     cursor: pointer !important;
 }
+
+.alert{
+    position: absolute;
+}

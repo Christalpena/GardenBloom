@@ -28,7 +28,7 @@ export default function SimpleSnackbar(props) {
   );
 
   return (
-    <div>
+    <div className='alert'>
       <Snackbar
         open={open}
         autoHideDuration={1000}

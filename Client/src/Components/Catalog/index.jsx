@@ -53,7 +53,6 @@ export function Catalog(props) {
             {
                 props.open ? <SimpleSnackbar setOpen={props.setOpen} /> : <></>
             }
-
         </section>
     )
 }
