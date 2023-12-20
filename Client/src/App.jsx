@@ -7,6 +7,7 @@ import { Catalog } from './Components/Catalog'
 import FlowerInf from './Components/FlowerInf'
 import ShopCard from './Components/ShopCard'
 import Footer from './Components/Footer'
+import Services from './Components/Services'
 
 function App() {
   const [items,setItems] = useState([]);
@@ -78,10 +79,19 @@ function App() {
           element={<FlowerInf setItems={setItems} items={items}/>}> 
         </Route>
 
+        <Route
+          path='/Services'
+          element={<Services />}
+        >
+
+        </Route>
+
         <Route 
           path='/Catalog/shopcart' 
           element={<ShopCard items={items} addItem={addItem} setItems={setItems} />}>
         </Route>
+
+        
 
       </Routes>
       <Footer />

@@ -6,6 +6,7 @@ body{
 
 :root{
   --title-font-family: 'Hedvig Letters Serif', serif;
+  --btn-color:green;
   --image-outline-color: green;
   --title-color: #E90064;
   --small-text-color: red;
