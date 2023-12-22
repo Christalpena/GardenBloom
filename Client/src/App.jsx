@@ -5,7 +5,7 @@ import { BrowserRouter,Navigate,Route,Routes } from 'react-router-dom'
 import { Home } from './Components/Home'
 import { Catalog } from './Components/Catalog'
 import FlowerInf from './Components/FlowerInf'
-import ShopCard from './Components/ShopCard'
+import ShopCart from './Components/ShopCart'
 import Footer from './Components/Footer'
 import Services from './Components/Services'
 import Contacts from './Components/Contacts'
@@ -39,7 +39,7 @@ function App() {
   return (
     <BrowserRouter>
     <section>
-      <Header items={items.length} />
+      <Header items={items} />
       
       <Routes>
         <Route 
@@ -99,7 +99,7 @@ function App() {
 
         <Route 
           path='/Catalog/shopcart' 
-          element={<ShopCard items={items} addItem={addItem} setItems={setItems} />}>
+          element={<ShopCart items={items} addItem={addItem} setItems={setItems} />}>
         </Route>
 
         

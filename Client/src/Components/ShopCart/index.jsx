@@ -1,9 +1,9 @@
-import "./ShopCard.css"
+import "./ShopCart.css"
 import img from "/img/flowerShopCart.png"
 import { TiMinus } from "react-icons/ti";
 import { FaPlus } from "react-icons/fa6";
 
-const ShopCard = (props) => {
+const ShopCart = (props) => {
 
     //This function is to calculate the discount of an item
     const discountCalculator =(discount, subTotal) => {
@@ -46,45 +46,42 @@ const ShopCard = (props) => {
                                 <h2 className="shopCart__title">Total</h2>
 
                             </div>
+                            <hr />
                         {
                         props.items.map((item) => 
-                            <div className="shopCart__items">
+                            <><div className="shopCart__items">
                                 <div className="grid-item shopCart__item-display">
                                     <img src={item.image} alt="" className="shopCart__img" />
-                                    <div className="shopCart__description">
-                                        <p>{item.name}</p>
-                                        <p>Price:{item.price}</p>
-                                        { item.discount ? <p>Discount:  -{item.discount}%</p> : <></>}
+                                    <div className="shopCart__container">
+                                        <p className="shopCart__name">{item.name}</p>
+                                        <p>Price: {item.price}</p>
+                                        {item.discount ? <p>Discount:  -{item.discount}%</p> : <></>}
                                     </div>
                                 </div>
                                 <div class="grid-item shopCart__btn-display">
-                                <FaPlus 
-                                onClick={()=>{
-                                    props.addItem({
-                                        id:item.id
-                                    })
-                                }
-                                }
-                                size={'1.5rem'} 
-                                className="card__icon" 
-                                />
+                                    <FaPlus
+                                        onClick={() => {
+                                            props.addItem({
+                                                id: item.id
+                                            });
+                                        } }
+                                        className="shopCart__btn" />
 
-                                <h4>{item.quantity}</h4>
+                                    <h4>{item.quantity}</h4>
 
-                                <TiMinus  
-                                onClick={() => rest(item.id)} size={'1.5rem'} className="card__icon" />
+                                    <TiMinus
+                                        onClick={() => rest(item.id)} className="shopCart__btn" />
                                 </div>
 
-                                <div className="grid-item">
-                                    { 
-                                    item.discount ? 
+                                <div className="grid-item shopCart__price">
+                                    {item.discount ?
                                         <p>
-                                            {discountCalculator(item.discount,item.subTotal)}
+                                            {discountCalculator(item.discount, item.subTotal)}
                                         </p>
-                                    : <p>{item.subTotal}</p>
-                                    }
-                                </div> 
-                            </div>
+                                        : 
+                                        <p>{item.subTotal}</p>}
+                                </div>
+                            </div><hr /></>
                             )
                         }
 
@@ -107,4 +104,4 @@ const ShopCard = (props) => {
     )
 };
 
-export default ShopCard;
+export default ShopCart;

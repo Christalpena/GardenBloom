@@ -9,8 +9,6 @@
 }
 
 .shopCart__title{
-    font-family: var(--title-font-family);
-    color: var(--title-color);
     text-align: center;
     font-weight: bold;
 }
@@ -23,8 +21,6 @@
 
 
 .grid-item {
-    outline: 10px solid;
-    outline-color: rgba(128, 128, 128, 0.154);
     text-align: center;
 }
 
@@ -43,10 +39,30 @@
 
 }
 
-.shopCart__description{
+.shopCart__container{
     flex-grow: 1;
     text-align: left;
     margin-left: 20px;
+}
+
+.shopCart__name{
+    font-weight: bold;
+    font-size: larger;
+    color: var(--title-color);
+
+}
+
+.shopCart__btn{
+    background-color: var(--title-color);
+    width: 50px;
+    height: 50px;
+    padding: 15px;
+    color: white;
+    cursor: pointer;
+}
+
+.shopCart__price{
+    margin: auto;
 }
 
 .shopCart__total-container{
