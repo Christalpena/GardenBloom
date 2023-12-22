@@ -8,6 +8,7 @@ import FlowerInf from './Components/FlowerInf'
 import ShopCard from './Components/ShopCard'
 import Footer from './Components/Footer'
 import Services from './Components/Services'
+import Contacts from './Components/Contacts'
 
 function App() {
   const [items,setItems] = useState([]);
@@ -71,7 +72,9 @@ function App() {
         </Route>
 
         <Route 
-          path="/Contacts" > 
+          path="/Contacts"
+          element={<Contacts />}
+          > 
         </Route>
 
         <Route 
