@@ -17,7 +17,6 @@ function App() {
   useEffect(() => {
   },[items]);
 
-
   const addItem = (data) => {
       setOpen(!open);
       setItems(prevItems => {
@@ -50,7 +49,12 @@ function App() {
 
         <Route 
           path="/GardenBloom" 
-          element={<Home setItems={setItems} items={items}/>}> 
+          element={<Home 
+          items={items}
+          open={open}
+          setOpen={setOpen}
+          addItem={addItem}
+          />}> 
         </Route>
 
         <Route path="/Home" 
@@ -79,7 +83,11 @@ function App() {
 
         <Route 
           path="/Catalog/:name/:id" 
-          element={<FlowerInf setItems={setItems} items={items}/>}> 
+          element={<FlowerInf 
+          addItem={addItem}
+          open={open}
+          setOpen={setOpen}
+          items={items}/>}> 
         </Route>
 
         <Route

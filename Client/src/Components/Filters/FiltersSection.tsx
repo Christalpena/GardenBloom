@@ -84,14 +84,14 @@ const Filters = ({filterPrice,filter}) => {
                 <h1 className="filters__title">Types</h1>
                 {
                     types.map((type) => {return (
-                        <li onClick={() => filter('type_name',type)}>{type}</li>
+                        <li key={type} onClick={() => filter('type_name',type)}>{type}</li>
                     )})
                 } 
             
                 <h1 className="filters__title">Sizes</h1>
                 {
                     size.map((size) => {return(
-                        <li onClick={() => filter('size',size)}>{size}</li>
+                        <li key={size} onClick={() => filter('size',size)}>{size}</li>
                     )})
                 } 
             </div>

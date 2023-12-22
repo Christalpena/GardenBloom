@@ -22,8 +22,8 @@ const Header = (props) => {
                 </form>
                 <div className="header__links">
                     {
-                        pillTabs.map((links) => 
-                            <Link  style={{textDecoration:'none',color:'black'}} to={links}>{links}</Link>
+                        pillTabs.map((link) => 
+                            <Link key={link}  style={{textDecoration:'none',color:'black'}} to={link}>{link}</Link>
                         )
                     }
                     <Badge badgeContent={props.items} color="success" >

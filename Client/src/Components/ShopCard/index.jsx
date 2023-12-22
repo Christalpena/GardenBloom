@@ -75,7 +75,7 @@ const ShopCard = (props) => {
                                 onClick={() => rest(item.id)} size={'1.5rem'} className="card__icon" />
                                 </div>
 
-                                <div class="grid-item">
+                                <div className="grid-item">
                                     { 
                                     item.discount ? 
                                         <p>

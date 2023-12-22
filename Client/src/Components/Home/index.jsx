@@ -1,10 +1,11 @@
 import "./Home.css"
 import { ListFlowers } from "../../Api/FlowersInf"
 import FlowerCard from "../Catalog/FlowerCard"
+import SimpleSnackbar from "../Catalog/Alert"
+
 export function  Home(props) {
 
     const flowers = ListFlowers()
-    console.log(flowers)
     const filterdFlowers = flowers.filter(flower => flower.discount > 0);
     const discount = filterdFlowers.slice(0,6)
     const flowersImg = flowers.slice(0,6)
@@ -37,7 +38,7 @@ export function  Home(props) {
                                 id={flower.id}
                                 name={flower.name}
                                 img={flower.image}
-                                setItems={props.setItems}
+                                addItem={props.addItem}
                                 items={props.items}
                                 discount={flower.discount}
                                 price={flower.price}
@@ -57,17 +58,19 @@ export function  Home(props) {
                 </section>
                 
                 <section className="home__gallery">
-                <h1 className="home__title">Our Gallery</h1>
-                <div className="home__galleryDiv">
-                    {
-                        flowersImg.map((flower) => 
-                            <img className="home__galleryImg" src={flower.image} alt="" />
-                        )
-                    }
-                </div>
+                    <h1 className="home__title">Our Gallery</h1>
+                    <div className="home__galleryDiv">
+                        {
+                            flowersImg.map((flower) => 
+                                <img key={flower.name} className="home__galleryImg" src={flower.image} alt="" />
+                            )
+                        }
+                    </div>
                 </section>
-
             </section>
+            {
+                props.open ? <SimpleSnackbar setOpen={props.setOpen} /> : <></>
+            }
         </section>
     )
 };

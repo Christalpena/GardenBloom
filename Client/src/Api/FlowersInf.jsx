@@ -31,6 +31,6 @@ export function ListFlowerInf (id) {
             setFlowerInf(res.data)
         };
         loadFlowerInf();
-    },[])
+    },[id])
     return(flower)
 }
