@@ -57,15 +57,15 @@ const Contacts = () => {
             <hr />
             <div className="contacts__form-group">
 
-                <label className="contacts__label" htmlFor="">name</label>
-                <input className="contacts__input" value={nameRef} onChange={(e) => setNameRef(e.target.value)}  placeholder="Enter your name" />
+                <label className="contacts__label" htmlFor="name">name</label>
+                <input id="name" className="contacts__input" value={nameRef} onChange={(e) => setNameRef(e.target.value)}  placeholder="Enter your name" />
 
 
-                <label className="contacts__label" htmlFor="">email</label>
-                <input className="contacts__input" value={emailRef} onChange={(e) => setEmailRef(e.target.value)}  type="email" placeholder="Enter your email" />
+                <label className="contacts__label" htmlFor="email">email</label>
+                <input id="email" className="contacts__input" value={emailRef} onChange={(e) => setEmailRef(e.target.value)}  type="email" placeholder="Enter your email" />
 
-                <label className="contacts__label" htmlFor="">Message</label>
-                <textarea value={messageRef} onChange={(e) => setMessageRef(e.target.value) }  placeholder="Enter your message" className="contacts__message" />
+                <label className="contacts__label" htmlFor="Message">Message</label>
+                <textarea id="Message" value={messageRef} onChange={(e) => setMessageRef(e.target.value) }  placeholder="Enter your message" className="contacts__message" />
 
                 <button className="contacts__btn">
                 Sent

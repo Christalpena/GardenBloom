@@ -49,16 +49,23 @@ const ShopCart = (props) => {
                             <hr />
                         {
                         props.items.map((item) => 
-                            <><div className="shopCart__items">
+                            <div key={item.name}><div className="shopCart__items">
                                 <div className="grid-item shopCart__item-display">
                                     <img src={item.image} alt="" className="shopCart__img" />
                                     <div className="shopCart__container">
                                         <p className="shopCart__name">{item.name}</p>
-                                        <p>Price: {item.price}</p>
+                                        <p>Price: ${item.price}</p>
                                         {item.discount ? <p>Discount:  -{item.discount}%</p> : <></>}
+                                        {item.discount ?
+                                        <p>
+                                            Total: ${discountCalculator(item.discount, item.subTotal)}
+                                        </p>
+                                        : 
+                                        <p>Total: ${item.subTotal}</p>}
                                     </div>
+
                                 </div>
-                                <div class="grid-item shopCart__btn-display">
+                                <div className="grid-item shopCart__btn-display">
                                     <FaPlus
                                         onClick={() => {
                                             props.addItem({
@@ -67,7 +74,7 @@ const ShopCart = (props) => {
                                         } }
                                         className="shopCart__btn" />
 
-                                    <h4>{item.quantity}</h4>
+                                    <h4 className="shopCart__itemCuantity">{item.quantity}</h4>
 
                                     <TiMinus
                                         onClick={() => rest(item.id)} className="shopCart__btn" />
@@ -76,18 +83,18 @@ const ShopCart = (props) => {
                                 <div className="grid-item shopCart__price">
                                     {item.discount ?
                                         <p>
-                                            {discountCalculator(item.discount, item.subTotal)}
+                                            ${discountCalculator(item.discount, item.subTotal)}
                                         </p>
                                         : 
-                                        <p>{item.subTotal}</p>}
+                                        <p>${item.subTotal}</p>}
                                 </div>
-                            </div><hr /></>
+                            </div><hr /></div>
                             )
                         }
 
                         <div className="shopCart__total-container">
                             <button className="shopCart__orderbtn">buy</button>
-                            <p className="shopCart__total">Total: {total()}</p>
+                            <p className="shopCart__total">Total: ${total()}</p>
                         </div>
                         </div>
                     </section>

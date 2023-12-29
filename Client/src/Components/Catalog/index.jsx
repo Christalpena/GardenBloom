@@ -4,7 +4,11 @@ import FlowerCard from './FlowerCard'
 import Filters from '../Filters/FiltersSection';
 import { useEffect, useState } from 'react';
 import SimpleSnackbar from './Alert';
-import Footer from '../Footer';
+import SplitButton from '../Filters/FilterSectionResponsive';
+import Button from '@mui/material/Button';
+import { IoFilterSharp } from "react-icons/io5";
+
+
 export function Catalog(props) {
 
     const flowers = ListFlowers();
@@ -28,11 +32,21 @@ export function Catalog(props) {
     useEffect(() => {
         setFlowers(flowers);
     }, [flowers]);
+    const clean = () => {
+        filter("");
+    }
 
     return(
         <section className='flowers'>
             <div className='flowers__filter'>
                 <Filters filter={filter} filterPrice={filterPrice}/>
+            </div>
+            <div className='flowers__filterResponsive'>
+                <IoFilterSharp size={'1.5rem'} />
+                <SplitButton filter={filter} filterBy = 'type_name' labelName='flower' />
+                <SplitButton filter={filter} filterBy='size' labelName='size' />
+                <Button variant="outlined" className="filters__btn" onClick={clean}>clean</Button>   
+
             </div>
             <div className='flowers__container'>
                 {
@@ -46,12 +60,15 @@ export function Catalog(props) {
                         items={props.items}
                         discount={flower.discount}
                         addItem={props.addItem}
+                        setOpen={props.setOpen}
+                        open={props.open}
+
                     /> 
                     )
                 }
             </div>
             {
-                props.open ? <SimpleSnackbar setOpen={props.setOpen} /> : <></>
+                props.open ? <SimpleSnackbar setOpen={props.setOpen}/> : <></>
             }
         </section>
     )

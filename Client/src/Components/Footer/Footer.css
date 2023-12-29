@@ -7,7 +7,6 @@
     padding: 0% 9%;
     align-items: center;
     margin-top: 3rem;
-    flex-wrap: wrap;
 }
 
 .footer__title{
@@ -19,4 +18,23 @@
     margin: 0px;
     font-size:medium;
     text-transform: capitalize;
+}
+
+@media screen and (max-width:610px){
+    .footer{
+        flex-direction: column;
+        align-items: self-start;
+        justify-content: center;
+    }
+
+    .footer__container{
+        margin-bottom: 10px;
+    }
+    .footer__title{
+        font-size: large;
+    }
+    .footer__container p{
+        font-size: small;
+    }
+
 }

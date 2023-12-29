@@ -50,6 +50,7 @@
     border-color: transparent;
     transition: all 0.3s ease-in-out;
     height: 30px;
+    font-size: medium;
 }
 
 .flowerinf__btn:hover{
@@ -68,4 +69,70 @@
     justify-content: space-between;
     flex-wrap: wrap;
 
+}
+
+@media screen and (max-width:1340px){
+    .flowerinf__img{
+        width: 40%;
+        height: 350px;    
+    }
+}
+
+@media screen and (max-width:1250px){
+    .flowerinf__img{
+        width: 40%;
+        height: 300px;    
+    }
+
+    .flowerinf__price{
+        font-size: xx-large;
+    }
+
+    .flowerinf__description p{
+        font-size: medium;
+    }
+}
+@media screen and (max-width:1050px){
+    .flowerinf{
+        margin-top: 10rem;
+    }
+    .flowerinf__btn{
+        width: 100%;
+        margin-top: 1rem;
+
+    }
+    .flowerinf__content{
+        justify-content: center; 
+        align-items: center;
+        flex-direction: column;
+        height: auto;
+        margin: 0%;
+        width: 100%;
+    }
+
+    .flowerinf__description{
+        margin: -5rem 0px 0px 0px ;
+    }
+    
+    .flowerinf__img{
+        width: 300px;
+        height: 300px;
+        transform:translate(0px, -100px);
+    
+    }
+}
+@media screen and (max-width:590px){
+    .flowerinf__img{
+        width: 200px;
+        height: 200px;
+    
+    }
+
+    .flowerinf__price{
+        font-size: x-large;
+    }
+
+    .flowerinf__content{
+        padding: 50px 25px;
+    }
 }

@@ -39,7 +39,7 @@ const Filters = ({filterPrice,filter}) => {
         <div className="filters">
             <div className="filters__con">
                 <IoFilterSharp size={'2rem'} />
-                <Button variant="outlined" className="filters__btn" onClick={() => clean()}>clean</Button>
+                <Button variant="outlined" className="filters__cleanBtn" onClick={() => clean()}>clean</Button>
             </div>
             <hr />
             <div className="filters__container">

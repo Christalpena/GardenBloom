@@ -29,6 +29,7 @@
     color: var(--small-text-color);
     font-weight: bold;
     font-family: var(--title-font-family);
+    padding: 10px;
 
 }
 
@@ -111,4 +112,152 @@
     width: 400px;
     height: 400px;
     margin-bottom: 20px;
+}
+
+@media screen and (max-width:1440px){
+
+    .home__pageName{
+        font-size: 5rem;
+    }
+
+    .home__h3{
+        font-size: x-large;
+    }
+
+    .home__description{
+        font-size: larger;
+
+    }
+}
+
+@media screen and (max-width:1300px){
+    .home__welcome{
+        background-size: 400px;
+    }
+    .home__pageName{
+        font-size: 4rem;
+    }
+
+    .home__h3{
+        font-size: 1.4rem;
+    }
+    .home__h3{
+        max-width: 40ch;
+    }
+}
+
+@media screen and (max-width:1040px){
+    .home__welcome{
+        background-image: none;
+    }
+
+    .home__introduction{
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 0% 9%;
+    }
+    .home__h3{
+        margin: auto;
+        text-align: center;
+    }
+
+    .home__p{
+        max-width: 80%;
+    }
+
+    .home__galleryImg{
+        height: 300px;
+        width: 300px;
+    }
+}
+
+
+@media screen and (max-width:914px){
+
+    .home__pageName{
+        font-size: 3rem;
+    }
+
+    .home__h3{
+        font-size: 1.3rem;
+        max-width: 40ch;
+
+    }
+    .home__description{
+        font-size: large;
+
+    }
+    .home__title{
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 810px){
+    .home__galleryImg{
+        height: 230px;
+        width: 230px;
+    }
+    
+}
+@media screen and (max-width:600px){
+    .home__h3{
+        max-width: 30ch;
+
+    }
+
+    .home__slogan{
+        font-size: large;
+    }
+
+    .home__description{
+        font-size:medium;
+
+    }
+
+    .home__p h3{
+        font-size: larger;
+    }
+    .home__p h1{
+        font-size: x-large;
+    }
+
+    .home__galleryImg{
+        height: 190px;
+        width: 190px;
+    }
+}
+
+
+@media screen and (max-width:500px){
+
+    .home__pageName{
+        font-size: 2.5rem;
+    }
+
+    .home__h3{
+        font-size: 1.2rem;
+
+    }
+
+    .home__slogan{
+        max-width: 30ch;
+        margin: auto;
+    }
+    .home__title{
+        font-size: 35px;
+    }
+
+    .home__p{
+        padding: 60px 30px;
+
+    }
+
+    .home__galleryImg{
+        height: 150px;
+        width: 150px;
+    }
 }

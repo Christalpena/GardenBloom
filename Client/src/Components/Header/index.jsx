@@ -23,18 +23,20 @@ const Header = (props) => {
                 <div className="header__links">
                     {
                         pillTabs.map((link) => 
-                            <Link key={link}  style={{textDecoration:'none',color:'black'}} to={link}>{link}</Link>
+                            <Link key={link} to={link}>{link}</Link>
                         )
                     }
-                    <Badge badgeContent={props.items.length} color="success" >
-                        <Link to={'/Catalog/shopcart'}>
+                </div>
+                <Badge badgeContent={props.items.length} color="success">
+                        <Link to={'/Catalog/shopcart'}
+                        >
                             <BsBagHeart 
                                 className="header__icon"
-                                size="1.9rem"
-                                color="black" />
+                                color="black" 
+                                
+                            />
                         </Link>
-                    </Badge>
-                </div>
+                </Badge>
 
 
            </div>

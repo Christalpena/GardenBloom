@@ -23,7 +23,7 @@
     display: flex;
     justify-content: space-between;
     text-align: center;
-    height: 50vh;
+    height: 40vh;
     align-items: center;
 }
 
@@ -34,9 +34,9 @@
 
 .contacts__phrases{
     text-align: center;
-    max-width: 90ch;
     margin: auto;
-    margin-bottom: 3em;
+    margin-bottom: 3rem;
+    padding: 0% 9%;
 }
 
 .contacts__phrases  p{
@@ -78,3 +78,66 @@
     outline-color: var(--title-color);
 
 }
+
+
+@media screen and (max-width:1440px){
+    .contacts__pageTitle{
+        font-size: 5rem;
+    }
+
+    .contacts__phrases p{
+        font-size: larger;
+    }
+}
+
+@media screen and (max-width:1300px){
+    .contacts__pageTitle{
+        font-size: 4rem;
+    }
+    .contacts__title{
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width:914px){
+    .contacts__pageTitle{
+        font-size: 3rem;
+    }
+    .contacts__information{
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .contacts__background{
+        height: 81vh;
+    }
+
+    .contacts__phrases p{
+        font-size: large;
+    }
+}
+
+@media screen and (max-width:600px){
+
+    .contacts__phrases p{
+        font-size: medium;
+    }
+    .contacts__phrases h3{
+        font-size: larger;
+    }
+
+    .contacts__form-group{
+        width: 100%;
+
+    }
+}
+
+
+@media screen and (max-width:500px){
+    .contacts__pageTitle{
+        font-size: 2.5rem;
+    }
+
+
+}
+

@@ -23,8 +23,8 @@ const FlowerInf = (props) => {
                     <h2>{flower.name}</h2>
                     <h1 className="flowerinf__price">${flower.price}</h1>
                     <p>{flower.description}</p>
-                    <h4>Size: {flower.size}</h4>
-                    <h4>Type: {flower.type_name}</h4>
+                    <h5>Size: {flower.size}</h5>
+                    <h5>Type: {flower.type_name}</h5>
                     <button className="flowerinf__btn" 
                     onClick={() => {
                         props.addItem({
@@ -55,6 +55,8 @@ const FlowerInf = (props) => {
                         items={props.items}
                         price={flower.price}
                         addItem={props.addItem}
+                        setOpen={props.setOpen}
+                        open={props.open}
                     />
                     
                     )

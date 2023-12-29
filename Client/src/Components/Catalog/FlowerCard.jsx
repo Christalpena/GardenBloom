@@ -7,7 +7,7 @@ import SimpleSnackbar from './Alert';
 const FlowerCard = (props) => {   
     
     return (
-        <div>
+        <div className="card__container">
             <div className="card">
                 <Link  to={`/Catalog/${props.name}/${props.id}`} style={{textDecoration:'none',textAlign:"center"}} replace>
                     <img className="card__img" src={props.img} alt={props.name} />
@@ -27,7 +27,6 @@ const FlowerCard = (props) => {
 
     
                     <IoHeartOutline 
-                    size={'1.5rem'} 
                     className="card__icon" />
                     
                     <BsBagHeart
@@ -40,14 +39,13 @@ const FlowerCard = (props) => {
                             discount:props.discount,
                             quantity: 1,
                             subTotal: (props.price)
-                        }); 
+                        },
+                        props.setOpen(!props.open)
+                        
+                        ); 
                     }} 
-                    size={'1.5rem'} 
                     className="card__icon" />
             </div>
-            {
-                props.open ? <SimpleSnackbar setOpen={setOpen} /> : <></>
-            }
     </div>
 
     )

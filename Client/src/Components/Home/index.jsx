@@ -42,6 +42,8 @@ export function  Home(props) {
                                 items={props.items}
                                 discount={flower.discount}
                                 price={flower.price}
+                                setOpen={props.setOpen}
+                                open={props.open}
 
                             />
                             )
