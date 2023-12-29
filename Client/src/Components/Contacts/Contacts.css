@@ -79,6 +79,24 @@
 
 }
 
+.contacts__errorMsg{
+    text-align: center;
+    color: white;
+    padding: 20px;
+    margin-top: 32px;
+    border-radius: 2px;
+}
+
+
+.contacts__errorMsg-error{
+    background-color: rgba(255, 0, 0, 0.742);
+
+}
+
+.contacts__errorMsg-success{
+    background-color:green;
+
+}
 
 @media screen and (max-width:1440px){
     .contacts__pageTitle{

@@ -2,29 +2,48 @@ import "./Contacts.css"
 import React from "react"
 import { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
+import isEmail from 'validator/lib/isEmail';
+
 
 const Contacts = () => {
-    useEffect(() => emailjs.init("eRbMgizLmOtEjqQq-"), []);
+    useEffect(() => emailjs.init(""), []);
     const [emailRef,setEmailRef] = useState('');
     const [nameRef, setNameRef] = useState('');
     const [messageRef, setMessageRef] = useState('');
+    const [errorMsg, setErrorMsg] = useState({
+        show: false,
+        type: '',
+        message: ''
+
+    })
 
     // Add these
     const handleSubmit = async (e) => {
-      e.preventDefault();
-      const serviceId = "service_o5vb4x3";
-      const templateId = "template_823kjnl";
-      try {
-        await emailjs.send(serviceId, templateId, {
-            name: nameRef,
-            recipient: emailRef,
-            message: messageRef
-        });
-        alert("email successfully sent check inbox");
-      } catch (error) {
-        console.log(error);
-      } finally {
-      }
+        e.preventDefault();
+        const serviceId = "";
+        const templateId = "";
+        if(isEmail(emailRef) && messageRef.length >=50 && nameRef.length >= 10){
+            try {
+                await emailjs.send(serviceId, templateId, {
+                    name: nameRef,
+                    recipient: emailRef,
+                    message: messageRef
+                });
+                setErrorMsg({
+                    show:true,
+                    type: "success",
+                    message: "Email successfully sent check inbox"
+                });
+              } finally {
+              }
+        }else{
+            setErrorMsg({
+                show:true,
+                type: "error",
+                message: "Please ensure that your name is a minimum of 10 characters, the message spans at least 100 characters, and verify the accuracy of your email input."
+            });
+
+        }
     };
 
     return(
@@ -55,17 +74,23 @@ const Contacts = () => {
             </div>
             <form className="contacts__form" onSubmit={handleSubmit}>
             <hr />
-            <div className="contacts__form-group">
 
+            <div className="contacts__form-group">
+                { errorMsg.show ?                 
+                    <div className={`contacts__errorMsg contacts__errorMsg-${errorMsg.type}`}>
+                        {errorMsg.message}
+                    </div> 
+                : <></>
+                }
                 <label className="contacts__label" htmlFor="name">name</label>
-                <input id="name" className="contacts__input" value={nameRef} onChange={(e) => setNameRef(e.target.value)}  placeholder="Enter your name" />
+                <input id="name" className="contacts__input" value={nameRef} onChange={(e) => setNameRef(e.target.value)}  placeholder="Enter your name" required />
 
 
                 <label className="contacts__label" htmlFor="email">email</label>
-                <input id="email" className="contacts__input" value={emailRef} onChange={(e) => setEmailRef(e.target.value)}  type="email" placeholder="Enter your email" />
+                <input id="email" className="contacts__input" value={emailRef} onChange={(e) => setEmailRef(e.target.value)}  type="email" placeholder="Enter your email" required />
 
                 <label className="contacts__label" htmlFor="Message">Message</label>
-                <textarea id="Message" value={messageRef} onChange={(e) => setMessageRef(e.target.value) }  placeholder="Enter your message" className="contacts__message" />
+                <textarea id="Message" value={messageRef} onChange={(e) => setMessageRef(e.target.value) }  placeholder="Enter your message" className="contacts__message" required />
 
                 <button className="contacts__btn">
                 Sent
