@@ -29,11 +29,14 @@
 .servicesCard__description{
     margin-bottom: 30px;
     font-size:larger;
+    max-width: 70ch;
+
 }
 
 .serviceCard-direction{
     flex-direction: row-reverse;
     background-color: rgba(195, 195, 195, 0.1);
+
 }
 
 .serviceCard__btn{

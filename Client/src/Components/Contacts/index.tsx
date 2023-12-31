@@ -40,7 +40,7 @@ const Contacts = () => {
             setErrorMsg({
                 show:true,
                 type: "error",
-                message: "Please ensure that your name is a minimum of 10 characters, the message spans at least 100 characters, and verify the accuracy of your email input."
+                message: "Please ensure that your name is a minimum of 10 characters, the message spans at least 50 characters, and verify the accuracy of your email input."
             });
 
         }

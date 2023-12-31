@@ -124,6 +124,10 @@
     margin: auto;
 }
 
+.shopCart__priceDisplay{
+    display: none;
+}
+
 
 @media screen and (max-width:1140px){
 
@@ -192,6 +196,10 @@
     }
     .shopCart__container{
         font-size: small;
+    }
+
+    .shopCart__priceDisplay{
+        display: inline;
     }
 
     .shopCart__titleContainer{

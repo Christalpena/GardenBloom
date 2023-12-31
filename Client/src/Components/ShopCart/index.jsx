@@ -56,12 +56,15 @@ const ShopCart = (props) => {
                                         <p className="shopCart__name">{item.name}</p>
                                         <p>Price: ${item.price}</p>
                                         {item.discount ? <p>Discount:  -{item.discount}%</p> : <></>}
+
+                                        <div className="shopCart__priceDisplay">
                                         {item.discount ?
                                         <p>
                                             Total: ${discountCalculator(item.discount, item.subTotal)}
                                         </p>
                                         : 
                                         <p>Total: ${item.subTotal}</p>}
+                                        </div>
                                     </div>
 
                                 </div>
