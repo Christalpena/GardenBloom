@@ -7,44 +7,59 @@ import SimpleSnackbar from './Alert';
 import SplitButton from '../Filters/FilterSectionResponsive';
 import Button from '@mui/material/Button';
 import { IoFilterSharp } from "react-icons/io5";
+import { useLocation } from 'react-router-dom';
 
 
 export function Catalog(props) {
 
     const flowers = ListFlowers();
     const [newFlowers, setFlowers] = useState(flowers);
+    const {state} = useLocation()
 
-
-    const filter = (name,data) => {        
-        const filteredFlowers = flowers.filter(flower => flower[name] === data)
+    /**
+     * This function is to filter the flowers by name or size, this function needs two params: the first one is the name of the filter type (name or size) and the second one is what the user clicks on so that it is filtered by that.
+     * @param {*} name 
+     * @param {*} data 
+     */
+    const filterNameOrSize = (name,data) => {        
+        const filteredFlowers = flowers.filter(flower => flower[name] === data);
         data === "" ? setFlowers(flowers) : setFlowers(filteredFlowers);
-    }
+    };
+
+    /**
+     *This function is to filter the flower whose price is greater than or equal to the given price and less than or equal to the given price.
+     * @param {*} price1 
+     * @param {*} price2 
+     */
 
     const filterPrice =(price1,price2) =>{
         if(price1  !== 0){
+
             const filteredFlowers = flowers.filter(flower => flower.price >= price1 && flower.price <= price2);
             setFlowers(filteredFlowers)
         }else{
-            setFlowers(flowers)
-        }
-    }
+            setFlowers(flowers);
+        };
+    };
 
     useEffect(() => {
-        setFlowers(flowers);
-    }, [flowers]);
+        //Checking if there are data in the useLocation
+        state ? setFlowers(state.data) : setFlowers(flowers);
+    }, [flowers,state]);
+
     const clean = () => {
-        filter("");
-    }
+        filterNameOrSize("");
+    };
 
     return(
         <section className='flowers'>
             <div className='flowers__filter'>
-                <Filters filter={filter} filterPrice={filterPrice}/>
+                <Filters filterNameOrSize={filterNameOrSize} filterPrice={filterPrice}/>
             </div>
             <div className='flowers__filterResponsive'>
                 <IoFilterSharp size={'1.5rem'} />
-                <SplitButton filter={filter} filterBy = 'type_name' labelName='flower' />
-                <SplitButton filter={filter} filterBy='size' labelName='size' />
+                <SplitButton filterNameOrSize={filterNameOrSize} filterBy = 'type_name' labelName='flower' />
+                <SplitButton filterNameOrSize={filterNameOrSize} filterBy='size' labelName='size' />
                 <Button variant="outlined" className="filters__btn" onClick={clean}>clean</Button>   
 
             </div>

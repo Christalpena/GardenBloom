@@ -7,7 +7,7 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { IoFilterSharp } from "react-icons/io5";
 
-const Filters = ({filterPrice,filter}) => {
+const Filters = ({filterPrice,filterNameOrSize}) => {
 
     const [types, setTypes] = useState<string[]>([]);
     const [size, setSize] = useState<string[]>([]);
@@ -31,7 +31,7 @@ const Filters = ({filterPrice,filter}) => {
     const clean = () => {
         setPrice1(1);
         setPrice2(500);
-        filter("");
+        filterNameOrSize("");
     }
     
 
@@ -84,14 +84,14 @@ const Filters = ({filterPrice,filter}) => {
                 <h1 className="filters__title">Types</h1>
                 {
                     types.map((type) => {return (
-                        <li key={type} onClick={() => filter('type_name',type)}>{type}</li>
+                        <li key={type} onClick={() => filterNameOrSize('type_name',type)}>{type}</li>
                     )})
                 } 
             
                 <h1 className="filters__title">Sizes</h1>
                 {
                     size.map((size) => {return(
-                        <li key={size} onClick={() => filter('size',size)}>{size}</li>
+                        <li key={size} onClick={() => filterNameOrSize('size',size)}>{size}</li>
                     )})
                 } 
             </div>

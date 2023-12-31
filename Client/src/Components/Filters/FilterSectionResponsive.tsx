@@ -11,7 +11,7 @@ import MenuList from '@mui/material/MenuList';
 import { useState } from 'react';
 import { ListFlowers } from '../../Api/FlowersInf';
 
-export default function SplitButton({filter,filterBy, labelName}) {
+export default function SplitButton({filterNameOrSize,filterBy, labelName}) {
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef<HTMLDivElement>(null);
   const [selectedIndex, setSelectedIndex] = React.useState(1);
@@ -38,7 +38,7 @@ export default function SplitButton({filter,filterBy, labelName}) {
   ) => {
     setSelectedIndex(index);
     setOpen(false);
-    filter(filterBy,data)
+    filterNameOrSize(filterBy,data)
 
   };
 

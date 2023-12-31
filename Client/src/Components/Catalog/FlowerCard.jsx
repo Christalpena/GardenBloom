@@ -2,7 +2,6 @@ import "./Catalog.css"
 import { IoHeartOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { BsBagHeart } from "react-icons/bs";
-import SimpleSnackbar from './Alert';
 
 const FlowerCard = (props) => {   
     

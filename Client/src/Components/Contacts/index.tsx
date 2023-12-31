@@ -17,7 +17,6 @@ const Contacts = () => {
 
     })
 
-    // Add these
     const handleSubmit = async (e) => {
         e.preventDefault();
         const serviceId = "";
