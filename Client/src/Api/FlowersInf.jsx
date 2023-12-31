@@ -1,6 +1,12 @@
 import { getFlowers,flowerInf } from './api'
 import { useEffect, useState } from 'react'
 
+
+
+/**
+ * This function get all the flowers to show them in the catalog
+ * @returns flowers
+ */
 export function ListFlowers () {
     const [flowers, setFlowers] = useState([])
 

@@ -14,14 +14,17 @@ export function Catalog(props) {
 
     const flowers = ListFlowers();
     const [newFlowers, setFlowers] = useState(flowers);
-    const {state} = useLocation()
+    const {state} = useLocation();
+    const [msg,setMsg] = useState();
+    console.log(newFlowers)
 
     /**
      * This function is to filter the flowers by name or size, this function needs two params: the first one is the name of the filter type (name or size) and the second one is what the user clicks on so that it is filtered by that.
      * @param {*} name 
      * @param {*} data 
      */
-    const filterNameOrSize = (name,data) => {        
+    const filterNameOrSize = (name,data) => {
+        setMsg("")        
         const filteredFlowers = flowers.filter(flower => flower[name] === data);
         data === "" ? setFlowers(flowers) : setFlowers(filteredFlowers);
     };
@@ -33,6 +36,7 @@ export function Catalog(props) {
      */
 
     const filterPrice =(price1,price2) =>{
+        setMsg("")        
         if(price1  !== 0){
 
             const filteredFlowers = flowers.filter(flower => flower.price >= price1 && flower.price <= price2);
@@ -44,7 +48,13 @@ export function Catalog(props) {
 
     useEffect(() => {
         //Checking if there are data in the useLocation
-        state ? setFlowers(state.data) : setFlowers(flowers);
+        if(state){
+            state.data.length > 0 ? setFlowers(state.data) : setMsg('Flower Not Found')
+            console.log(msg)
+        } else {
+            setFlowers(flowers)
+        }
+        
     }, [flowers,state]);
 
     const clean = () => {
@@ -63,7 +73,13 @@ export function Catalog(props) {
                 <Button variant="outlined" className="filters__btn" onClick={clean}>clean</Button>   
 
             </div>
-            <div className='flowers__container'>
+            {
+                msg ? 
+                <div className='flowers__notFoundMsg'>
+                    <h1 > {msg} </h1>
+                    <img src="./img/logo.png" alt="" />
+                </div>:
+                <div className='flowers__container'>
                 {
                     newFlowers.map((flower) => 
                     <FlowerCard 
@@ -82,6 +98,7 @@ export function Catalog(props) {
                     )
                 }
             </div>
+            }
             {
                 props.open ? <SimpleSnackbar setOpen={props.setOpen}/> : <></>
             }

@@ -18,6 +18,15 @@
     margin-top: 1.3rem;
 
 }
+.flowers__notFoundMsg{
+    text-align: center;
+    flex-grow: 1;
+    font-family: 'Lilita One', sans-serif;
+    height: 100vh;
+    color: var(--btn-color);
+    text-transform: uppercase;
+}
+
 
 .card {
     width: 280px;

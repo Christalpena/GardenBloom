@@ -103,7 +103,7 @@ const ShopCart = (props) => {
                     </section>
                     :
                     <div className="shopCart__empty">
-                        <h1 className="shopCart__title">The shop cart is empty</h1>
+                        <h1 className="shopCart__empytitle">The shop cart is empty</h1>
                         <img className="shopCart__emptyimg" src={img} alt="" />
                         <br />
 

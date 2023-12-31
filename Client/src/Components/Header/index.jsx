@@ -30,10 +30,10 @@ const Header = (props) => {
         e.preventDefault();
         const newFlower = capitalizeFirstLetter(flower)
         const data = flowers.filter(flower => flower.name.includes(newFlower))
-        navigate("/Catalog",{ state: { data: data } })
-    };
+        console.log(data.length)
+        navigate("/Catalog",{ state: { data: data } });
     
-
+    }
     return(
         <header>
            <div className="header">
