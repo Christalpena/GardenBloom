@@ -1,0 +1,88 @@
+
+.filters__title{
+    color: var(--title-color);
+    font-size:x-large;
+    font-family: 'Hedvig Letters Serif', serif;
+}
+
+.filters__container li{
+    list-style: none;
+    color: black !important;
+    font-size:larger;
+    width: min-content;
+    cursor: pointer;
+    margin-left: 10px;
+
+}
+
+.filters__inputsBox{
+    display: flex;
+    margin-bottom: 10px;
+    flex-direction: column;
+}
+
+.filters__input{
+    width: 150px !important;
+}
+.filters__cleanBtn, .filters__btn {
+    color:black !important;
+    border-color: gray !important;
+    background-color: white !important;
+    font-size:x-small !important;
+}
+
+.filters__btn{
+    width: 150px;
+
+}
+
+.filters__btnIcon{
+    color:black !important;
+    border-color: transparent !important;
+    width: 10px;
+    padding: 3px 0.5px !important;
+}
+
+.filters__btnContainer{
+    box-shadow: none !important;
+    outline: 1px solid;
+    outline-color: gray;
+    justify-content: space-between;
+}
+
+.filters__con{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (max-width:745px){
+    .filters__btn{
+        width: 110px;
+    }
+
+    .filters__name{
+        font-size: small !important;
+    }
+}
+
+@media screen and (max-width:595px){
+    .filters__btn{
+        width: 90px;
+    }
+
+}
+
+@media screen and (max-width:522px){
+    .filters__btn{
+        width: 60px;
+    }
+
+}
+
+@media screen and (max-width:421px){
+    .filters__btn{
+        width: 45px;
+        font-size: xx-small !important;
+    }
+}

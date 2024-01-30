@@ -1,0 +1,223 @@
+.flowers{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 9rem;
+    padding: 0% 9%;    
+}
+
+.flowers__filterResponsive{
+    display: none;
+}
+
+.flowers__container{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    right: 0;
+    margin-top: 1.3rem;
+
+}
+.flowers__notFoundMsg{
+    text-align: center;
+    flex-grow: 1;
+    font-family: 'Lilita One', sans-serif;
+    height: 100vh;
+    color: var(--btn-color);
+    text-transform: uppercase;
+}
+
+
+.card {
+    width: 280px;
+    height: 330px;
+    display: flex;
+    align-items: center;
+    padding: 10px 0px;
+    cursor: pointer;
+    box-shadow: var(--boxShadow);
+    border-color: transparent;
+    border-radius: 0px;
+    margin: 0px 5px;
+}
+
+.card__img{
+    height: 200px !important;
+    width: 200px;
+    transform: translate(0,-30px);
+    box-shadow: var(--boxShadow);
+}
+
+.card__content{
+    padding: 0px 42px;
+    width: 100%;
+    color: black;
+    margin-top: -1rem;
+
+}
+
+.card__title{
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: larger;
+    
+}
+
+.card__price, .card__discount{
+    margin: 0;
+}
+
+.card__discount{
+    color: var(--small-text-color);
+    font-weight: bold;
+
+}
+
+.card__icons{
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 20px;
+    height: 60px;
+    transform: translate(0px, -43px);
+    align-items: center;
+    box-shadow: var(--boxShadow);
+    background-color: white;
+    cursor: default;
+    margin: auto;
+}
+
+.card__icons h5{
+    margin: 0;
+}
+
+.card__icon{
+    cursor: pointer !important;
+    width: 25px;
+    height: 25px;
+}
+
+.alert{
+    position: absolute;
+}
+
+@media screen and (max-width:1015px){
+    .flowers{
+        display: flex;
+        padding: 0% 9%; 
+        flex-direction: column;
+        margin-top: 8rem;   
+    }
+
+    .flowers__filter{
+        display: none;
+    }
+
+    .flowers__filterResponsive{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+        align-items: stretch;
+    }
+
+    .flowers__container{
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    .card{
+        width: 240px;
+        height: 320px;
+    }
+    .card__img{
+        height: 170px !important;
+        width: 170px;
+    }
+
+}
+
+@media screen and (max-width:914px){
+    .card{
+        width: 220px;
+        height: 300px;
+    }
+
+    .card__img{
+        height: 150px !important;
+        width: 150px;
+    }
+    .card__icons{
+        width: 150px;
+    }
+    .card__icon{
+        cursor: pointer !important;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media screen and (max-width:840px){
+    .card{
+        width: 200px;
+        height: 250px;
+    }
+
+    .card__img{
+        height: 130px !important;
+        width: 130px;
+    }
+    .card__icons{
+        width: 130px;
+        height: 40px;
+        transform: translate(0px, -23px);
+        margin-bottom: 2rem;
+    }
+    .card__title{
+        font-size: medium;
+        
+    }
+    .card__price{
+        font-size: large;
+    }
+
+    .filters__btnContainer{
+        width: fit-content;
+    }
+}
+
+@media screen and (max-width:768px){
+
+    .card{
+        width: 150px;
+        height: 200px;
+        
+    }
+
+    .card__img{
+        height: 100px !important;
+        width: 100px;
+    }
+    .card__icons{
+        width: 110px;
+        transform: translate(0px, -25px);
+
+    }
+    .card__content{
+        padding: 0px 35px;
+    }
+
+    .card__price{
+        font-size: medium;
+    }
+
+}
+
+@media screen and (max-width: 483px){
+    .flowers{
+        margin-top: 8rem;
+    }
+
+    .card{
+        margin: 0px 0px;
+    }
+}

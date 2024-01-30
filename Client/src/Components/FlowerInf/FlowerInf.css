@@ -1,0 +1,138 @@
+.flowerinf{
+    margin-top: 8rem;
+    padding: 0% 9%;
+}
+
+.flowerinf__content{
+    display: flex;
+    padding: 50px;
+    box-shadow: var(--boxShadow);
+    height: 500px;
+    width: 90%;
+    justify-content: flex-end; 
+    margin-left: auto; 
+    margin-right: 2rem;
+    align-items: center;
+
+}
+
+.flowerinf__img{
+    width: 40%;
+    height: 400px;
+    transform: translate(-120px,0px);
+    border-radius: 20px;
+    box-shadow: var(--boxShadow);
+
+}
+.flowerinf__description{
+    text-align: center; 
+    margin-left: 20PX;
+}
+.flowerinf__description p{
+    font-size: large;
+}
+.flowerinf__description h2{
+    font-weight: bold;
+    font-family: var(--title-font-family);
+}
+.flowerinf__price{
+    color: var(--small-text-color);
+    font-weight: bold;
+}
+
+.flowerinf__btn{
+    margin-top: 2rem;
+    width: 45%;
+    background-color: green;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-color: transparent;
+    transition: all 0.3s ease-in-out;
+    height: 30px;
+    font-size: medium;
+}
+
+.flowerinf__btn:hover{
+    width: 55%;
+    transition: all 0.3s ease-in-out;
+    height: 35px;
+}
+.flowerinf__title{
+    margin: 3rem 0rem;
+    font-weight: bold;
+    font-family: var(--title-font-family);
+
+}
+.flowerinf__recomendations{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+@media screen and (max-width:1340px){
+    .flowerinf__img{
+        width: 40%;
+        height: 350px;    
+    }
+}
+
+@media screen and (max-width:1250px){
+    .flowerinf__img{
+        width: 40%;
+        height: 300px;    
+    }
+
+    .flowerinf__price{
+        font-size: xx-large;
+    }
+
+    .flowerinf__description p{
+        font-size: medium;
+    }
+}
+@media screen and (max-width:1050px){
+    .flowerinf{
+        margin-top: 12rem;
+    }
+    .flowerinf__btn{
+        width: 100%;
+        margin-top: 1rem;
+
+    }
+    .flowerinf__content{
+        justify-content: center; 
+        align-items: center;
+        flex-direction: column;
+        height: auto;
+        margin: 0%;
+        width: 100%;
+    }
+
+    .flowerinf__description{
+        margin: -5rem 0px 0px 0px ;
+    }
+    
+    .flowerinf__img{
+        width: 300px;
+        height: 300px;
+        transform:translate(0px, -100px);
+    
+    }
+}
+@media screen and (max-width:590px){
+    .flowerinf__img{
+        width: 200px;
+        height: 200px;
+    
+    }
+
+    .flowerinf__price{
+        font-size: x-large;
+    }
+
+    .flowerinf__content{
+        padding: 50px 25px;
+    }
+}

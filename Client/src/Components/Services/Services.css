@@ -1,0 +1,147 @@
+.services{
+    margin-top: 3rem;
+
+}
+.serviceCard{
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    align-items: center;
+    padding: 0% 9%;
+
+
+}
+
+.serviceCard__img{
+    width: 400px;
+    height: 400px;
+    outline: 2px solid;
+    outline-color: var(--image-outline-color);
+}
+
+.serviceCard__title{
+    font-family: var(--title-font-family);
+    color: var(--title-color);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.servicesCard__description{
+    margin-bottom: 30px;
+    font-size:larger;
+    max-width: 70ch;
+
+}
+
+.serviceCard-direction{
+    flex-direction: row-reverse;
+    background-color: rgba(195, 195, 195, 0.1);
+
+}
+
+.serviceCard__btn{
+    background-color: var(--btn-color);
+    text-decoration: none;
+    padding: 10px;
+    width: 100px;
+    color: white;
+}
+
+
+@media screen and (max-width:1515px){
+    .serviceCard__img{
+        width: 330px;
+        height: 330px;
+    }
+    .servicesCard__description{
+        max-width: 60ch;
+    }
+
+}
+
+@media screen and (max-width:1270px){
+    .serviceCard__img{
+        width: 300px;
+        height: 300px;
+    }
+    .servicesCard__description{
+        max-width: 50ch;
+        font-size: large;
+    }
+}
+
+
+@media screen and (max-width:1080px){
+    .serviceCard__img{
+        width: 270px;
+        height: 270px;
+    }
+    .servicesCard__description{
+        font-size: medium;
+    }
+   
+}
+
+@media screen and (max-width: 1005px){
+
+    .services{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+
+    }
+    .serviceCard{
+        flex-direction: column;
+        align-items: center;
+        padding: 100px 60px;
+        height: 100%;
+        width: 50%;
+    }
+    
+    .serviceCard__img{
+        width: 250px;
+        height: 250px;
+        margin-bottom: 20px;
+    }
+
+    .serviceCard__title{
+        font-size: x-large;
+    }
+
+    .servicesCard__description{
+        max-width: 30ch;
+    }
+}
+@media screen and (max-width:836px){
+    .serviceCard__img{
+        width: 200px;
+        height: 200px;
+    }
+
+    .servicesCard__description{
+        font-size: medium;
+    }
+}
+
+
+@media screen and (max-width:750px){
+    .services{
+        flex-direction: column;
+
+    }
+    .serviceCard{
+        width: 100% !important;
+        align-items: center;
+        text-align: center;
+        padding: 100px 0px;
+
+    }
+    
+    .serviceCard__img{
+        width: 250px;
+        height: 250px;
+        margin-bottom: 20px;
+    }
+
+}
