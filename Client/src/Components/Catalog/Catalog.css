@@ -27,6 +27,9 @@
     text-transform: uppercase;
 }
 
+.card__container{
+    margin-bottom: 10px;
+}
 
 .card {
     width: 280px;
@@ -59,7 +62,7 @@
 .card__title{
     text-transform: capitalize;
     font-weight: bold;
-    font-size: larger;
+    font-size:medium;
     
 }
 
@@ -78,8 +81,8 @@
     display: flex;
     justify-content: space-around;
     border-radius: 20px;
-    height: 60px;
-    transform: translate(0px, -43px);
+    height: 50px;
+    transform: translate(0px, -30px);
     align-items: center;
     box-shadow: var(--boxShadow);
     background-color: white;
@@ -101,7 +104,7 @@
     position: absolute;
 }
 
-@media screen and (max-width:1015px){
+@media screen and (max-width:1060px){
     .flowers{
         display: flex;
         padding: 0% 9%; 
@@ -136,7 +139,7 @@
 
 }
 
-@media screen and (max-width:914px){
+@media screen and (max-width:915px){
     .card{
         width: 220px;
         height: 300px;
@@ -159,7 +162,7 @@
 @media screen and (max-width:840px){
     .card{
         width: 200px;
-        height: 250px;
+        height: 270px;
     }
 
     .card__img{
@@ -170,11 +173,6 @@
         width: 130px;
         height: 40px;
         transform: translate(0px, -23px);
-        margin-bottom: 2rem;
-    }
-    .card__title{
-        font-size: medium;
-        
     }
     .card__price{
         font-size: large;
@@ -188,14 +186,14 @@
 @media screen and (max-width:768px){
 
     .card{
-        width: 150px;
-        height: 200px;
+        width: 190px;
+        height: 250px;
         
     }
 
     .card__img{
-        height: 100px !important;
-        width: 100px;
+        height: 110px !important;
+        width: 110px;
     }
     .card__icons{
         width: 110px;
@@ -211,6 +209,18 @@
     }
 
 }
+@media screen and (max-width:732px){
+
+    .card{
+        width: 150px;
+        height: 250px;
+    }
+
+    .card__img{
+        height: 110px !important;
+        width: 110px;
+    }
+}
 
 @media screen and (max-width: 483px){
     .flowers{
@@ -220,4 +230,30 @@
     .card{
         margin: 0px 0px;
     }
+}
+
+@media screen and (max-width: 380px){
+
+    .flowers__container{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        height: 275px;
+        width: 250px;
+    }
+    .card__img{
+        height: 150px !important;
+        width: 150px;
+    }
+    .card__icons{
+        width: 150px;
+        height: 50px;
+        transform: translate(0px, -33px);
+
+    }
+    
 }

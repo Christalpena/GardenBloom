@@ -29,7 +29,7 @@ export function  Home(props) {
                 </div>
 
                 <section className="home__discount">
-                    <h1 className="home__title">Just the best for you</h1>
+                    <h1 className="home__title home__title-margin">Just the best for you</h1>
                     <div className="home__discountCards">
                         {
                             discount.map((flower) => 

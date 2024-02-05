@@ -29,7 +29,7 @@ const Filters = ({filterPrice,filterNameOrSize}) => {
     }, [flowers, price1,price2]);
 
     const clean = () => {
-        setPrice1(1);
+        setPrice1(0);
         setPrice2(500);
         filterNameOrSize("");
     }

@@ -16,6 +16,7 @@
     font-weight: bold;
     text-transform: uppercase;
     font-size: 6rem;
+    margin-top: 5rem;
 }
 
 .contacts__information{
@@ -122,14 +123,10 @@
         font-size: 3rem;
     }
     .contacts__information{
+        margin-top: 4rem;
         flex-direction: column;
         justify-content: space-around;
     }
-
-    .contacts__background{
-        height: 81vh;
-    }
-
     .contacts__phrases p{
         font-size: large;
     }
